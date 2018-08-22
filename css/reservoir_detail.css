@@ -1,0 +1,262 @@
+.reservoir-row {
+    padding: 20px 15px;
+}
+.reservoir-detail {
+    background-color: #23c6c8;
+    border-radius: 5px;
+}
+.reservoir-detail>.ibox-title {
+    border-radius: 5px 5px 0 0;
+    background-color: #23c6c8;
+    color: #fff;
+}
+.reservoir-detail >.ibox-title>.ibox-tools>a {
+    color: #fff!important;
+}
+.reservoir-detail>.ibox-content {
+    border: 1px solid #23c6c8;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.reservoir-item {
+    background-color: #58b495;
+    border-radius: 5px;
+}
+.reservoir-item>.ibox-title {
+    border-radius: 5px 5px 0 0;
+    background-color: #58b495;
+    color: #fff;
+}
+.reservoir-item >.ibox-title>.ibox-tools>a {
+    color: #fff!important;
+}
+.reservoir-item>.ibox-content {
+    border: 1px solid #58b495;
+    border-radius: 0px 0px 5px 5px;
+    overflow: auto;
+}
+/* form表单样式 */
+.form-row>div>label {
+    display: inline-block;
+}
+.form-row>div>div {
+    /* display: inline-block; */
+}
+.form-row {
+    font-size: 14px;
+    background-color: #fff;
+    padding: 10px 0;
+}
+.panel-row {
+    margin-bottom: 20px;
+}
+.reservoir-panel>div>div>div, .panel-item>div>div{
+    /* overflow: hidden;
+    width: calc(100% - 105px);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top; 
+    display: inline-block;  */
+    display: inline;
+}
+.panel-item {
+    margin-top: 50px;
+}
+.panel-item>div>div {
+    font-family: 'Lccd';
+    font-size: 18px;
+    color: #f0ab58;
+    width: auto;
+}
+.panel-item>div>label {
+    /* vertical-align: bottom; */
+    /* border-left: 3px solid #58b495; */
+    padding-left: 5px;
+}
+.detail-total-investment {
+    margin-top: 130px;
+}
+.detail-total-investment>label {
+    border-left: 3px solid #c33431;
+    padding-left: 5px;
+    display: inline-block;
+}
+.detail-total-investment>div {
+    display: inline;
+    font-size: 30px;
+    font-family: 'Lccd';
+    color: #c33431;
+}
+.reservoir-panel>div>div>label {
+   /*  width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: top; */
+    border-left: 3px solid #58b495;
+    padding-left: 5px;
+    display: inline-block;
+}
+.reservoir-panel>div>div.col-lg-12.col-md-12>label {
+    /* width: 100px; */
+}
+.month-btn {
+    height: 35px;
+}
+.month-btn>a:hover {
+    text-decoration: underline;
+}
+.month-btn>a {
+    text-align: center;
+}
+.month-btn>a:hover>.download-btn {
+    /* display: block; */
+}
+.month-btn>a {
+    height: 30px;
+    line-height: 30px;
+}
+.month-btn>a.active {
+    border: 1px solid #e0e0e0;
+    background-color: #23c6c8;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}
+.month-btn>a.gray {
+    color: #adabab;
+    cursor: none;
+    pointer-events: none;
+}
+.month-btn .download-btn {
+    display: none;
+}
+.month-btn .download-btn>i {
+    font-size: 25px;
+    margin: 10px;
+    cursor: pointer;
+}
+.month-papge .ibox-content {
+    height: 200px;
+}
+.file-content {
+    /* text-align: center; */
+    margin: 15px;
+    height: 50px;
+}
+.file-content>div>i {
+    font-size: 30px;
+    margin: 0 8px;
+}
+.file-content>div {
+    display: inline-block;
+}
+.attach-content {
+    /* text-align: center; */
+    margin: 15px;
+    height: 30px;
+    display: none;
+}
+.attach-content>div>i {
+    font-size: 18px;
+    text-align: center;
+    margin: 0 8px;
+}
+.attach-content>div {
+    display: inline-block;
+}
+.attach-content>label, .file-content>label {
+    line-height: 30px;
+}
+.reservoir-panel-row {
+    font-size: 14px;
+}
+.chart-area>div:first-child {
+    border-right: 1px dashed #e0e0e0;
+}
+.BMap_cpyCtrl {
+    display: none;
+}
+.anchorBL {
+    display: none;
+}
+.panel-item-detail>.reservoir-panel>div>div>div {
+    /* white-space: normal; */
+}
+.wrapper.wrapper-content {
+    overflow: auto;
+}
+.month-paper>.ibox-content {
+    overflow: auto;
+}
+.year-drop>.time-title {
+    vertical-align: top;
+    line-height: 40px;
+    display: inline-block;
+}
+.year-drop>.form-group {
+    max-width: 450px;
+    display: inline-block;
+}
+.year-drop {
+    margin: 0 15px;
+}
+/* -----隐藏月报----- */
+.month-paper-content {
+    display: none;
+}
+.attach-content>div>i {
+    cursor: pointer;
+}
+/* ----------------雨情----------------- */
+.reservoir-rain>.ibox-title {
+    background-color: #55adec;
+}
+.reservoir-rain>.ibox-content {
+    border-color: #55adec;
+}
+.rain-detail {
+    font-size: 14px;
+}
+.rain-detail>div>label {
+    border-left: 3px solid #55adec;
+    padding-left: 5px;
+    height: 15px;
+    line-height: 15px;
+    margin: 0;
+}
+.rain-detail>div>div {
+    display: inline-block;
+}
+.rain-situation, .water-height, .water-flow {
+    margin: 20px 0;
+    clear: both;
+    float: left;
+    width: 100%;
+}
+/* -----详情页视频监控----- */
+.video-operation >.video-title {
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0;
+}
+.video-wrapper {
+    font-size: 14px;
+}
+.video-wrapper>div{
+    padding: 10px 0;
+}
+.video-wrapper>div>div{
+    display: inline-block;
+    width: 85%;
+    vertical-align: top;
+}
+.video-wrapper>div>div>a {
+    padding: 0 8px;
+}
+.video-row .ibox> .ibox-title{
+    background-color: #353d63;
+}
+.video-row .ibox> .ibox-content {
+    border-color: #353d63;
+}

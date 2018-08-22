@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>富文本编辑器</title>
+	</head>
+	<body>
+		<!-- 富文本编辑器片段  -->
+		 <div id="editor">
+			<p>欢迎使用 <b>wangEditor</b> 富文本编辑器</p>
+		</div>
+
+		<!-- 注意， 只需要引用 JS，无需引用任何 CSS ！！！-->
+		<script type="text/javascript" src="js/wangEditor.min.js"></script>
+		<script type="text/javascript">
+			var E = window.wangEditor
+			var editor = new E('#editor')
+			// 或者 var editor = new E( document.getElementById('editor') )
+			editor.create();
+			console.log("first!");
+		</script>
+		<!-- 富文本编辑器片段  -->
+	</body>
+</html>

@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Dashboard v.2</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- 自定义 -->
+    <link href="css/self-theme.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <!-- 视频 -->
+    <link rel="stylesheet" type="text/css" href="DSSPlay.css" />
+    <script src="ocxfun.js"></script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        #allmap {
+            width: 100%;
+            height: calc(100vh - 65px);
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        /* 百度地图api解决label宽度无效 */
+
+        #allmap label {
+            max-width: none;
+        }
+
+        /* 去掉百度地图api里左下角logo */
+
+        .BMap_cpyCtrl {
+            display: none;
+        }
+
+        .anchorBL {
+            display: none;
+        }
+    </style>
+
+</head>
+
+<body class="md-skin fixed-nav no-skin-config">
+    <!-- <body> -->
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    ·
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">David Williams</strong>
+                                    </span>
+                                    <span class="text-muted text-xs block">Art Director
+                                        <b class="caret"></b>
+                                    </span>
+                                </span>
+                            </a>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li>
+                                    <a href="profile.html">Profile</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">Contacts</a>
+                                </li>
+                                <li>
+                                    <a href="mailbox.html">Mailbox</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html">Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="nav-label">Dashboards</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="index.html">Dashboard v.1</a>
+                            </li>
+                            <li class="active">
+                                <a href="dashboard_2.html">Dashboard v.2</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_3.html">Dashboard v.3</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_4_1.html">Dashboard v.4</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_5.html">Dashboard v.5 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="layouts.html">
+                            <i class="fa fa-diamond"></i>
+                            <span class="nav-label">Layouts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="nav-label">Graphs</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="graph_flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_morris.html">Morris.js Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_rickshaw.html">Rickshaw Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_chartjs.html">Chart.js</a>
+                            </li>
+                            <li>
+                                <a href="graph_chartist.html">Chartist</a>
+                            </li>
+                            <li>
+                                <a href="c3.html">c3 charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_peity.html">Peity Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_sparkline.html">Sparkline Charts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html">
+                            <i class="fa fa-envelope"></i>
+                            <span class="nav-label">Mailbox </span>
+                            <span class="label label-warning pull-right">16/24</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="mailbox.html">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="mail_detail.html">Email view</a>
+                            </li>
+                            <li>
+                                <a href="mail_compose.html">Compose email</a>
+                            </li>
+                            <li>
+                                <a href="email_template.html">Email templates</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html">
+                            <i class="fa fa-pie-chart"></i>
+                            <span class="nav-label">Metrics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html">
+                            <i class="fa fa-flask"></i>
+                            <span class="nav-label">Widgets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-edit"></i>
+                            <span class="nav-label">Forms</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="form_basic.html">Basic form</a>
+                            </li>
+                            <li>
+                                <a href="form_advanced.html">Advanced Plugins</a>
+                            </li>
+                            <li>
+                                <a href="form_wizard.html">Wizard</a>
+                            </li>
+                            <li>
+                                <a href="form_file_upload.html">File Upload</a>
+                            </li>
+                            <li>
+                                <a href="form_editors.html">Text Editor</a>
+                            </li>
+                            <li>
+                                <a href="form_autocomplete.html">Autocomplete</a>
+                            </li>
+                            <li>
+                                <a href="form_markdown.html">Markdown</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="nav-label">App Views</span>
+                            <span class="pull-right label label-primary">SPECIAL</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="contacts.html">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href="profile_2.html">Profile v.2</a>
+                            </li>
+                            <li>
+                                <a href="contacts_2.html">Contacts v.2</a>
+                            </li>
+                            <li>
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li>
+                                <a href="project_detail.html">Project detail</a>
+                            </li>
+                            <li>
+                                <a href="activity_stream.html">Activity stream</a>
+                            </li>
+                            <li>
+                                <a href="teams_board.html">Teams board</a>
+                            </li>
+                            <li>
+                                <a href="social_feed.html">Social feed</a>
+                            </li>
+                            <li>
+                                <a href="clients.html">Clients</a>
+                            </li>
+                            <li>
+                                <a href="full_height.html">Outlook view</a>
+                            </li>
+                            <li>
+                                <a href="vote_list.html">Vote list</a>
+                            </li>
+                            <li>
+                                <a href="file_manager.html">File manager</a>
+                            </li>
+                            <li>
+                                <a href="calendar.html">Calendar</a>
+                            </li>
+                            <li>
+                                <a href="issue_tracker.html">Issue tracker</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="article.html">Article</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="timeline.html">Timeline</a>
+                            </li>
+                            <li>
+                                <a href="pin_board.html">Pin board</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-label">Other Pages</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="search_results.html">Search results</a>
+                            </li>
+                            <li>
+                                <a href="lockscreen.html">Lockscreen</a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">Invoice</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a href="login_two_columns.html">Login v.2</a>
+                            </li>
+                            <li>
+                                <a href="forgot_password.html">Forget password</a>
+                            </li>
+                            <li>
+                                <a href="register.html">Register</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404 Page</a>
+                            </li>
+                            <li>
+                                <a href="500.html">500 Page</a>
+                            </li>
+                            <li>
+                                <a href="empty_page.html">Empty page</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-globe"></i>
+                            <span class="nav-label">Miscellaneous</span>
+                            <span class="label label-info pull-right">NEW</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="toastr_notifications.html">Notification</a>
+                            </li>
+                            <li>
+                                <a href="nestable_list.html">Nestable list</a>
+                            </li>
+                            <li>
+                                <a href="agile_board.html">Agile board</a>
+                            </li>
+                            <li>
+                                <a href="timeline_2.html">Timeline v.2</a>
+                            </li>
+                            <li>
+                                <a href="diff.html">Diff</a>
+                            </li>
+                            <li>
+                                <a href="pdf_viewer.html">PDF viewer</a>
+                            </li>
+                            <li>
+                                <a href="i18support.html">i18 support</a>
+                            </li>
+                            <li>
+                                <a href="sweetalert.html">Sweet alert</a>
+                            </li>
+                            <li>
+                                <a href="idle_timer.html">Idle timer</a>
+                            </li>
+                            <li>
+                                <a href="truncate.html">Truncate</a>
+                            </li>
+                            <li>
+                                <a href="password_meter.html">Password meter</a>
+                            </li>
+                            <li>
+                                <a href="spinners.html">Spinners</a>
+                            </li>
+                            <li>
+                                <a href="spinners_usage.html">Spinners usage</a>
+                            </li>
+                            <li>
+                                <a href="tinycon.html">Live favicon</a>
+                            </li>
+                            <li>
+                                <a href="google_maps.html">Google maps</a>
+                            </li>
+                            <li>
+                                <a href="datamaps.html">Datamaps</a>
+                            </li>
+                            <li>
+                                <a href="social_buttons.html">Social buttons</a>
+                            </li>
+                            <li>
+                                <a href="code_editor.html">Code editor</a>
+                            </li>
+                            <li>
+                                <a href="modal_window.html">Modal window</a>
+                            </li>
+                            <li>
+                                <a href="clipboard.html">Clipboard</a>
+                            </li>
+                            <li>
+                                <a href="text_spinners.html">Text spinners</a>
+                            </li>
+                            <li>
+                                <a href="forum_main.html">Forum view</a>
+                            </li>
+                            <li>
+                                <a href="validation.html">Validation</a>
+                            </li>
+                            <li>
+                                <a href="tree_view.html">Tree view</a>
+                            </li>
+                            <li>
+                                <a href="loading_buttons.html">Loading buttons</a>
+                            </li>
+                            <li>
+                                <a href="chat_view.html">Chat view</a>
+                            </li>
+                            <li>
+                                <a href="masonry.html">Masonry</a>
+                            </li>
+                            <li>
+                                <a href="tour.html">Tour</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-flask"></i>
+                            <span class="nav-label">UI Elements</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="icons.html">Icons</a>
+                            </li>
+                            <li>
+                                <a href="draggable_panels.html">Draggable Panels</a>
+                            </li>
+                            <li>
+                                <a href="resizeable_panels.html">Resizeable Panels</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="video.html">Video</a>
+                            </li>
+                            <li>
+                                <a href="tabs_panels.html">Panels</a>
+                            </li>
+                            <li>
+                                <a href="tabs.html">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">Notifications & Tooltips</a>
+                            </li>
+                            <li>
+                                <a href="helper_classes.html">Helper css classes</a>
+                            </li>
+                            <li>
+                                <a href="badges_labels.html">Badges, Labels, Progress</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="grid_options.html">
+                            <i class="fa fa-laptop"></i>
+                            <span class="nav-label">Grid options</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span class="nav-label">Tables</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="table_basic.html">Static Tables</a>
+                            </li>
+                            <li>
+                                <a href="table_data_tables.html">Data Tables</a>
+                            </li>
+                            <li>
+                                <a href="table_foo_table.html">Foo Tables</a>
+                            </li>
+                            <li>
+                                <a href="jq_grid.html">jqGrid</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="nav-label">E-commerce</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="ecommerce_products_grid.html">Products grid</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product_list.html">Products list</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product.html">Product edit</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product_detail.html">Product detail</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce-cart.html">Cart</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce-orders.html">Orders</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_payments.html">Credit Card form</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="nav-label">Gallery</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="basic_gallery.html">Lightbox Gallery</a>
+                            </li>
+                            <li>
+                                <a href="slick_carousel.html">Slick Carousel</a>
+                            </li>
+                            <li>
+                                <a href="carousel.html">Bootstrap Carousel</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="nav-label">Menu Levels </span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="#">Third Level
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="css_animation.html">
+                            <i class="fa fa-magic"></i>
+                            <span class="nav-label">CSS Animations </span>
+                            <span class="label label-info pull-right">62</span>
+                        </a>
+                    </li>
+                    <li class="landing_link">
+                        <a target="_blank" href="landing.html">
+                            <i class="fa fa-star"></i>
+                            <span class="nav-label">Landing Page</span>
+                            <span class="label label-warning pull-right">NEW</span>
+                        </a>
+                    </li>
+                    <li class="special_link">
+                        <a href="package.html">
+                            <i class="fa fa-database"></i>
+                            <span class="nav-label">Package</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div id="main_content" class="map-content">
+                <div id="mbody" onload="init()" onunload="ButtonLogout_onclick()">
+                    <div id="mainbg">
+                        <div id="main">
+                            <div style="width: 90%;height: 30px;overflow: auto;" id="RetInfo">
+
+                            </div>
+                            <div style="width: 90%;height: 30px;overflow: auto;" id="GlobalInfo">
+
+                            </div>
+                            <div class="box_top"></div>
+                            <div id="mviewl">
+                                <div id="obj">
+                                    <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 80%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 弹出层 -->
+        <div id="dialog" class="dialog-hide" style="height: 400px; width: 600px;"></div>
+        <!-- 遮罩层 -->
+        <div id="mask" class="mask-position" onclick="closeDialog()"></div>
+        <!-- 全屏层 -->
+        <div id="fullscreen_map" style="display: none;">test</div>
+        <!-- Mainly scripts -->
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+        <!-- Flot -->
+        <script src="js/plugins/flot/jquery.flot.js"></script>
+        <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+        <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+        <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+        <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+        <script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+        <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+        <!-- Peity -->
+        <script src="js/plugins/peity/jquery.peity.min.js"></script>
+        <script src="js/demo/peity-demo.js"></script>
+
+        <!-- Custom and plugin javascript -->
+        <script src="js/inspinia.js"></script>
+        <script src="js/plugins/pace/pace.min.js"></script>
+
+        <!-- jQuery UI -->
+        <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- Jvectormap -->
+        <script src="js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+        <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+        <!-- EayPIE -->
+        <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+
+        <!-- Sparkline -->
+        <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+        <!-- Sparkline demo data  -->
+        <script src="js/demo/sparkline-demo.js"></script>
+
+        <!-- echarts -->
+        <script src="js/echarts.min.js"></script>
+        <script src="js/bmap.min.js"></script>
+        <script src="js/china.js"></script>
+        <script src="js/guizhou.js"></script>
+        <script src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+
+        <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+        <!-- slick carousel-->
+        <script src="js/plugins/slick/slick.min.js"></script>
+
+        <link href="css/plugins/jqGrid/ui.jqgrid.css" rel="stylesheet">
+        <link href="css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+        <!-- jqGrid -->
+        <script src="js/plugins/jqGrid/i18n/grid.locale-en.js"></script>
+        <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
+
+        <style>
+            .slick_demo_2 .ibox-content {
+                margin: 0 10px;
+            }
+        </style>
+        <script>
+            $(function () {
+                var obj = document.getElementById("DPSDK_OCX");
+                // 初始化
+                var gWndId = obj.DPSDK_CreateSmartWnd(0, 0, 100, 100);
+                obj.DPSDK_SetWndCount(gWndId, 1);
+                obj.DPSDK_SetSelWnd(gWndId, 0);
+                for (var i = 1; i <= 4; i++)
+                    obj.DPSDK_SetToolBtnVisible(i, false);
+                obj.DPSDK_SetToolBtnVisible(7, false);
+                obj.DPSDK_SetToolBtnVisible(9, false);
+                obj.DPSDK_SetControlButtonShowMode(1, 0);
+                obj.DPSDK_SetControlButtonShowMode(2, 0);
+                // 登录
+                var nRet = obj.DPSDK_AsyncLogin("58.16.188.145", "9000", "向敬光", "123456");
+                // 加载组织结构
+                obj.DPSDK_LoadDGroupInfo()
+                // ShowCallRetInfo(obj.DPSDK_LoadDGroupInfo(), "加载组织结构");
+                // 根据通道ID连接DMS
+                var nRet = obj.DPSDK_ConnectDmsByChnlId("1000063$1$0$1");
+                // ShowCallRetInfo(nRet, "根据通道ID连接DMS");
+                // 播放视频
+                var szCameraId = "1000063$1$0$1";            // 视频通道
+                var nStreamType = "1";       // 主码流
+                var nMediaType = "1";       //视频
+                var nTransType = "1";       //视频
+
+                var nWndNo = obj.DPSDK_GetSelWnd(gWndId);
+                var nRet = obj.DPSDK_StartRealplayByWndNo(gWndId, nWndNo, szCameraId, nStreamType, nMediaType, nTransType);
+                // ShowCallRetInfo(nRet, "播放视频");
+                if (nRet == 0) {
+                    insertRealplayHistory(szCameraId);
+                    ShowCallRetInfo(obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 1, bIVS), "规则线显示");//打开规则线显示
+                    ShowCallRetInfo(obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 2, bIVS), "目标框显示");//打开目标框显示
+                    ShowCallRetInfo(obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 3, bIVS), "轨迹线显示");//打开轨迹线显示
+                }
+
+            });
+        </script>
+</body>
+
+</html>

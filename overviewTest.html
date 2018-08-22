@@ -1,0 +1,3029 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Dashboard v.2</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+
+    <link href="css/animate.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- 自定义 -->
+    <link href="css/self-theme.css" rel="stylesheet">
+
+    <link href="css/plugins/slick/slick.css" rel="stylesheet">
+    <link href="css/plugins/slick/slick-theme.css" rel="stylesheet">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+        #allmap {
+            width: 100%;
+            height: calc(100vh - 65px);
+            overflow: hidden;
+            margin: 0;
+            font-family: "微软雅黑";
+        }
+
+        /* 百度地图api解决label宽度无效 */
+
+        #allmap label {
+            max-width: none;
+        }
+
+        /* 去掉百度地图api里左下角logo */
+
+        .BMap_cpyCtrl {
+            display: none;
+        }
+
+        .anchorBL {
+            display: none;
+        }
+    </style>
+    <!-- 百度地图 -->
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=kZmpkejBXwfYBNQp4Rzz38DRNMhUqsHj"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/TextIconOverlay/1.2/src/TextIconOverlay_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/MarkerClusterer/1.2/src/MarkerClusterer_min.js"></script>
+    <script type="text/javascript" src="http://api.map.baidu.com/library/AreaRestriction/1.2/src/AreaRestriction_min.js"></script>
+</head>
+
+<body class="md-skin fixed-nav no-skin-config">
+    <!-- <body> -->
+    <div id="wrapper">
+        <nav class="navbar-default navbar-static-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav metismenu" id="side-menu">
+                    <li class="nav-header">
+                        <div class="dropdown profile-element">
+                            <span>
+                                <img alt="image" class="img-circle" src="img/profile_small.jpg" />
+                            </span>
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                                <span class="clear">
+                                    ·
+                                    <span class="block m-t-xs">
+                                        <strong class="font-bold">David Williams</strong>
+                                    </span>
+                                    <span class="text-muted text-xs block">Art Director
+                                        <b class="caret"></b>
+                                    </span>
+                                </span>
+                            </a>
+                            <!-- <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li>
+                                    <a href="profile.html">北京</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">上海</a>
+                                </li>
+                                <li>
+                                    <a href="mailbox.html">天津</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html">贵州</a>
+                                </li>
+                            </ul>
+                            <ul class="dropdown-menu animated fadeInRight m-t-xs">
+                                <li>
+                                    <a href="profile.html">贵阳</a>
+                                </li>
+                                <li>
+                                    <a href="contacts.html">遵义</a>
+                                </li>
+                                <li>
+                                    <a href="mailbox.html">铜仁</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="login.html">毕节</a>
+                                </li>
+                            </ul> -->
+                        </div>
+                        <div class="logo-element">
+                            IN+
+                        </div>
+                    </li>
+                    <li class="active">
+                        <a href="index.html">
+                            <i class="fa fa-th-large"></i>
+                            <span class="nav-label">Dashboards</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="index.html">Dashboard v.1</a>
+                            </li>
+                            <li class="active">
+                                <a href="dashboard_2.html">Dashboard v.2</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_3.html">Dashboard v.3</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_4_1.html">Dashboard v.4</a>
+                            </li>
+                            <li>
+                                <a href="dashboard_5.html">Dashboard v.5 </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="layouts.html">
+                            <i class="fa fa-diamond"></i>
+                            <span class="nav-label">Layouts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart-o"></i>
+                            <span class="nav-label">Graphs</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="graph_flot.html">Flot Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_morris.html">Morris.js Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_rickshaw.html">Rickshaw Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_chartjs.html">Chart.js</a>
+                            </li>
+                            <li>
+                                <a href="graph_chartist.html">Chartist</a>
+                            </li>
+                            <li>
+                                <a href="c3.html">c3 charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_peity.html">Peity Charts</a>
+                            </li>
+                            <li>
+                                <a href="graph_sparkline.html">Sparkline Charts</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="mailbox.html">
+                            <i class="fa fa-envelope"></i>
+                            <span class="nav-label">Mailbox </span>
+                            <span class="label label-warning pull-right">16/24</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="mailbox.html">Inbox</a>
+                            </li>
+                            <li>
+                                <a href="mail_detail.html">Email view</a>
+                            </li>
+                            <li>
+                                <a href="mail_compose.html">Compose email</a>
+                            </li>
+                            <li>
+                                <a href="email_template.html">Email templates</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="metrics.html">
+                            <i class="fa fa-pie-chart"></i>
+                            <span class="nav-label">Metrics</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="widgets.html">
+                            <i class="fa fa-flask"></i>
+                            <span class="nav-label">Widgets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-edit"></i>
+                            <span class="nav-label">Forms</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="form_basic.html">Basic form</a>
+                            </li>
+                            <li>
+                                <a href="form_advanced.html">Advanced Plugins</a>
+                            </li>
+                            <li>
+                                <a href="form_wizard.html">Wizard</a>
+                            </li>
+                            <li>
+                                <a href="form_file_upload.html">File Upload</a>
+                            </li>
+                            <li>
+                                <a href="form_editors.html">Text Editor</a>
+                            </li>
+                            <li>
+                                <a href="form_autocomplete.html">Autocomplete</a>
+                            </li>
+                            <li>
+                                <a href="form_markdown.html">Markdown</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-desktop"></i>
+                            <span class="nav-label">App Views</span>
+                            <span class="pull-right label label-primary">SPECIAL</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="contacts.html">Contacts</a>
+                            </li>
+                            <li>
+                                <a href="profile.html">Profile</a>
+                            </li>
+                            <li>
+                                <a href="profile_2.html">Profile v.2</a>
+                            </li>
+                            <li>
+                                <a href="contacts_2.html">Contacts v.2</a>
+                            </li>
+                            <li>
+                                <a href="projects.html">Projects</a>
+                            </li>
+                            <li>
+                                <a href="project_detail.html">Project detail</a>
+                            </li>
+                            <li>
+                                <a href="activity_stream.html">Activity stream</a>
+                            </li>
+                            <li>
+                                <a href="teams_board.html">Teams board</a>
+                            </li>
+                            <li>
+                                <a href="social_feed.html">Social feed</a>
+                            </li>
+                            <li>
+                                <a href="clients.html">Clients</a>
+                            </li>
+                            <li>
+                                <a href="full_height.html">Outlook view</a>
+                            </li>
+                            <li>
+                                <a href="vote_list.html">Vote list</a>
+                            </li>
+                            <li>
+                                <a href="file_manager.html">File manager</a>
+                            </li>
+                            <li>
+                                <a href="calendar.html">Calendar</a>
+                            </li>
+                            <li>
+                                <a href="issue_tracker.html">Issue tracker</a>
+                            </li>
+                            <li>
+                                <a href="blog.html">Blog</a>
+                            </li>
+                            <li>
+                                <a href="article.html">Article</a>
+                            </li>
+                            <li>
+                                <a href="faq.html">FAQ</a>
+                            </li>
+                            <li>
+                                <a href="timeline.html">Timeline</a>
+                            </li>
+                            <li>
+                                <a href="pin_board.html">Pin board</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-files-o"></i>
+                            <span class="nav-label">Other Pages</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="search_results.html">Search results</a>
+                            </li>
+                            <li>
+                                <a href="lockscreen.html">Lockscreen</a>
+                            </li>
+                            <li>
+                                <a href="invoice.html">Invoice</a>
+                            </li>
+                            <li>
+                                <a href="login.html">Login</a>
+                            </li>
+                            <li>
+                                <a href="login_two_columns.html">Login v.2</a>
+                            </li>
+                            <li>
+                                <a href="forgot_password.html">Forget password</a>
+                            </li>
+                            <li>
+                                <a href="register.html">Register</a>
+                            </li>
+                            <li>
+                                <a href="404.html">404 Page</a>
+                            </li>
+                            <li>
+                                <a href="500.html">500 Page</a>
+                            </li>
+                            <li>
+                                <a href="empty_page.html">Empty page</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-globe"></i>
+                            <span class="nav-label">Miscellaneous</span>
+                            <span class="label label-info pull-right">NEW</span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="toastr_notifications.html">Notification</a>
+                            </li>
+                            <li>
+                                <a href="nestable_list.html">Nestable list</a>
+                            </li>
+                            <li>
+                                <a href="agile_board.html">Agile board</a>
+                            </li>
+                            <li>
+                                <a href="timeline_2.html">Timeline v.2</a>
+                            </li>
+                            <li>
+                                <a href="diff.html">Diff</a>
+                            </li>
+                            <li>
+                                <a href="pdf_viewer.html">PDF viewer</a>
+                            </li>
+                            <li>
+                                <a href="i18support.html">i18 support</a>
+                            </li>
+                            <li>
+                                <a href="sweetalert.html">Sweet alert</a>
+                            </li>
+                            <li>
+                                <a href="idle_timer.html">Idle timer</a>
+                            </li>
+                            <li>
+                                <a href="truncate.html">Truncate</a>
+                            </li>
+                            <li>
+                                <a href="password_meter.html">Password meter</a>
+                            </li>
+                            <li>
+                                <a href="spinners.html">Spinners</a>
+                            </li>
+                            <li>
+                                <a href="spinners_usage.html">Spinners usage</a>
+                            </li>
+                            <li>
+                                <a href="tinycon.html">Live favicon</a>
+                            </li>
+                            <li>
+                                <a href="google_maps.html">Google maps</a>
+                            </li>
+                            <li>
+                                <a href="datamaps.html">Datamaps</a>
+                            </li>
+                            <li>
+                                <a href="social_buttons.html">Social buttons</a>
+                            </li>
+                            <li>
+                                <a href="code_editor.html">Code editor</a>
+                            </li>
+                            <li>
+                                <a href="modal_window.html">Modal window</a>
+                            </li>
+                            <li>
+                                <a href="clipboard.html">Clipboard</a>
+                            </li>
+                            <li>
+                                <a href="text_spinners.html">Text spinners</a>
+                            </li>
+                            <li>
+                                <a href="forum_main.html">Forum view</a>
+                            </li>
+                            <li>
+                                <a href="validation.html">Validation</a>
+                            </li>
+                            <li>
+                                <a href="tree_view.html">Tree view</a>
+                            </li>
+                            <li>
+                                <a href="loading_buttons.html">Loading buttons</a>
+                            </li>
+                            <li>
+                                <a href="chat_view.html">Chat view</a>
+                            </li>
+                            <li>
+                                <a href="masonry.html">Masonry</a>
+                            </li>
+                            <li>
+                                <a href="tour.html">Tour</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-flask"></i>
+                            <span class="nav-label">UI Elements</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="typography.html">Typography</a>
+                            </li>
+                            <li>
+                                <a href="icons.html">Icons</a>
+                            </li>
+                            <li>
+                                <a href="draggable_panels.html">Draggable Panels</a>
+                            </li>
+                            <li>
+                                <a href="resizeable_panels.html">Resizeable Panels</a>
+                            </li>
+                            <li>
+                                <a href="buttons.html">Buttons</a>
+                            </li>
+                            <li>
+                                <a href="video.html">Video</a>
+                            </li>
+                            <li>
+                                <a href="tabs_panels.html">Panels</a>
+                            </li>
+                            <li>
+                                <a href="tabs.html">Tabs</a>
+                            </li>
+                            <li>
+                                <a href="notifications.html">Notifications & Tooltips</a>
+                            </li>
+                            <li>
+                                <a href="helper_classes.html">Helper css classes</a>
+                            </li>
+                            <li>
+                                <a href="badges_labels.html">Badges, Labels, Progress</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="grid_options.html">
+                            <i class="fa fa-laptop"></i>
+                            <span class="nav-label">Grid options</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-table"></i>
+                            <span class="nav-label">Tables</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="table_basic.html">Static Tables</a>
+                            </li>
+                            <li>
+                                <a href="table_data_tables.html">Data Tables</a>
+                            </li>
+                            <li>
+                                <a href="table_foo_table.html">Foo Tables</a>
+                            </li>
+                            <li>
+                                <a href="jq_grid.html">jqGrid</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span class="nav-label">E-commerce</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="ecommerce_products_grid.html">Products grid</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product_list.html">Products list</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product.html">Product edit</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_product_detail.html">Product detail</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce-cart.html">Cart</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce-orders.html">Orders</a>
+                            </li>
+                            <li>
+                                <a href="ecommerce_payments.html">Credit Card form</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-picture-o"></i>
+                            <span class="nav-label">Gallery</span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="basic_gallery.html">Lightbox Gallery</a>
+                            </li>
+                            <li>
+                                <a href="slick_carousel.html">Slick Carousel</a>
+                            </li>
+                            <li>
+                                <a href="carousel.html">Bootstrap Carousel</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-sitemap"></i>
+                            <span class="nav-label">Menu Levels </span>
+                            <span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level collapse">
+                            <li>
+                                <a href="#">Third Level
+                                    <span class="fa arrow"></span>
+                                </a>
+                                <ul class="nav nav-third-level">
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Third Level Item</a>
+                                    </li>
+
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                            <li>
+                                <a href="#">Second Level Item</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="css_animation.html">
+                            <i class="fa fa-magic"></i>
+                            <span class="nav-label">CSS Animations </span>
+                            <span class="label label-info pull-right">62</span>
+                        </a>
+                    </li>
+                    <li class="landing_link">
+                        <a target="_blank" href="landing.html">
+                            <i class="fa fa-star"></i>
+                            <span class="nav-label">Landing Page</span>
+                            <span class="label label-warning pull-right">NEW</span>
+                        </a>
+                    </li>
+                    <li class="special_link">
+                        <a href="package.html">
+                            <i class="fa fa-database"></i>
+                            <span class="nav-label">Package</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="gray-bg">
+            <div class="row border-bottom">
+                <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+                    <div class="navbar-header">
+                        <a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#">
+                            <i class="fa fa-bars"></i>
+                        </a>
+                        <form role="search" class="navbar-form-custom" action="search_results.html">
+                            <div class="form-group">
+                                <input type="text" placeholder="Search for something..." class="form-control" name="top-search" id="top-search">
+                            </div>
+                        </form>
+                    </div>
+                    <ul class="nav navbar-top-links navbar-right">
+                        <li>
+                            <span class="m-r-sm text-muted welcome-message">Welcome to INSPINIA+ Admin Theme.</span>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-envelope"></i>
+                                <span class="label label-warning">16</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-messages">
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a7.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">46h ago</small>
+                                            <strong>Mike Loreipsum</strong> started following
+                                            <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/a4.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right text-navy">5h ago</small>
+                                            <strong>Chris Johnatan Overtunk</strong> started following
+                                            <strong>Monica Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="dropdown-messages-box">
+                                        <a href="profile.html" class="pull-left">
+                                            <img alt="image" class="img-circle" src="img/profile.jpg">
+                                        </a>
+                                        <div>
+                                            <small class="pull-right">23h ago</small>
+                                            <strong>Monica Smith</strong> love
+                                            <strong>Kim Smith</strong>.
+                                            <br>
+                                            <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="mailbox.html">
+                                            <i class="fa fa-envelope"></i>
+                                            <strong>Read All Messages</strong>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
+                                <i class="fa fa-bell"></i>
+                                <span class="label label-primary">8</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-alerts">
+                                <li>
+                                    <a href="mailbox.html">
+                                        <div>
+                                            <i class="fa fa-envelope fa-fw"></i> You have 16 messages
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="profile.html">
+                                        <div>
+                                            <i class="fa fa-twitter fa-fw"></i> 3 New Followers
+                                            <span class="pull-right text-muted small">12 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <a href="grid_options.html">
+                                        <div>
+                                            <i class="fa fa-upload fa-fw"></i> Server Rebooted
+                                            <span class="pull-right text-muted small">4 minutes ago</span>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li class="divider"></li>
+                                <li>
+                                    <div class="text-center link-block">
+                                        <a href="notifications.html">
+                                            <strong>See All Alerts</strong>
+                                            <i class="fa fa-angle-right"></i>
+                                        </a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="login.html">
+                                <i class="fa fa-sign-out"></i> Log out
+                            </a>
+                        </li>
+                        <li>
+                            <a class="right-sidebar-toggle">
+                                <i class="fa fa-tasks"></i>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </div>
+            <!-- <div class="nav-tip">
+                <a>总览</a>
+            </div> -->
+            <!-- 主体内容 -->
+            <div id="main_content" class="map-content">
+                <div class="search-location">
+                    <input type="text" placeholder="请输入水库名">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="overview-video">
+                    <div class="video-outter">
+                        <div class="video-content">
+                            <a class="video-close">
+                                <i class="fa fa-times"></i>
+                            </a>
+                            <object id="DPSDK_OCX" classid="CLSID:D3E383B6-765D-448D-9476-DFD8B499926D" style="width: 100%; height: 100%" codebase="DpsdkOcx.cab#version=1.0.0.0"></object>
+                        </div>
+                    </div>
+                </div>
+                <div id="xml"></div>
+                <div id="allmap"></div>
+            </div>
+            <div class="right-tool">
+                <div class="overview-tool">
+                    <div id="toggle3" class="tip-btn">
+                        <i class="fa fa-angle-double-left"></i>
+                        <span>总概览</span>
+                    </div>
+                    <div id="toggle2" class="tip-btn">
+                        <i class="fa fa-angle-double-left"></i>
+                        <span>代办信息</span>
+                    </div>
+                    <div id="toggle1" class="tip-btn">
+                        <i class="fa fa-angle-double-left"></i>
+                        <span>详情数据</span>
+                    </div>
+
+                    <div class="overview-detail">
+                        <!-- grid详情 -->
+                        <div class="overview-grid">
+                            <table id="table_list_1"></table>
+                            <div id="pager_list_1"></div>
+                        </div>
+                        <!-- echart详情 -->
+                        <div class="chart-div">
+                            <div class="chart-detail-title">
+                                <span id="item_title">详情</span>
+                                <a class="close-link" onclick="closeDetail()">
+                                    <i class="fa fa-times"></i>
+                                </a>
+                            </div>
+                            <div id="chart_div" class="chart-detail">
+                                <div id="chart_detail">chart</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- <div id="toggle" class="tip-btn"> 
+						<span><<详情</span>
+					</div>-->
+                <div class="right-panel">
+                    <!-- 第一个悬浮框 -->
+                    <div class="tabs-container" id="container1">
+                        <ul class="nav nav-tabs">
+                            <li class="col-lg-6 col-md-6 active">
+                                <a data-toggle="tab" href="#tab-3" aria-expanded="true">
+                                    <i class="fa fa-laptop"></i>
+                                    <span class="control-tips">概述</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-6 col-md-6">
+                                <a data-toggle="tab" href="#tab-4" aria-expanded="false">
+                                    <i class="fa fa-desktop"></i>
+                                    <span class="control-tips">资金</span>
+                                </a>
+                            </li>
+                            <!-- <li class="">
+                                        <a data-toggle="tab" href="#tab-5" aria-expanded="false">
+                                            <i class="fa fa-database"></i>
+                                        </a>
+                                    </li> -->
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-3" class="tab-pane active">
+                                <div class="panel-body" id="item_detail">
+                                    <div class="item-detail">
+                                        <div class="panel-detail-title">思南水库</div>
+                                        <div>
+                                            <label>所在位置：</label>
+                                            <span id="location_show">50000000</span>
+                                        </div>
+                                        <div>
+                                            <label>水库规模：</label>
+                                            <span id="scale_show">50000000</span>
+                                        </div>
+                                        <div>
+                                            <label>水库等级：</label>
+                                            <span id="level_show">50000000</span>
+                                        </div>
+                                        <div>
+                                            <label>所属单位：</label>
+                                            <span id="legal_representative_name_show">50000000</span>
+                                        </div>
+                                        <div>
+                                            <label>主要功能：</label>
+                                            <span id="project_task_test">50000000</span>
+                                        </div>
+                                        <div>
+                                            <label>水库概述：</label>
+                                            <span id="overview_show">50000000</span>
+                                        </div>
+                                    </div>
+                                    <div class="all-details">
+                                        <a project-id="8a8082816458ab31016458ab463c0001">更多详情......</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="tab-4" class="tab-pane">
+                                <div class="panel-body">
+                                    <div class="col-lg-12 item-payment">
+                                        <div class="col-lg-6 cell-payment">
+                                            <div class="col-lg-12 detail-payment">
+                                                <div class="panel-font">中央累计拨付</div>
+                                                <div>
+                                                    <span>￥</span>
+                                                    <span class="font-num">2100000</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 detail-payment">
+                                                <div class="panel-font">当前累计拨付</div>
+                                                <div>
+                                                    <span>￥</span>
+                                                    <span class="font-num">2100000</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 map-payment">
+                                            <div id="payment_chart" style='width: 200px;height:250px;'></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 item-investment">
+                                        <div class="col-lg-6  cell-investment">
+                                            <!--
+													<div class="col-lg-12">
+														<div class="col-lg-6 detail-investment"><div>省政府投资：</div><div>2100000</div></div>
+														<div class="col-lg-6 detail-investment"><div>中央投资：</div><div>2100000</div></div>
+													</div>
+													<div class="col-lg-12">
+														<div class="col-lg-6 detail-investment"><div>当前投资：</div><div>2100000</div></div>
+														<div class="col-lg-6 detail-investment"><div>总投资：</div><div>2100000</div></div>
+													</div> -->
+                                            <div class="col-lg-12 detail-investment">
+                                                <div class="panel-font">省政府投资</div>
+                                                <div>
+                                                    <span>￥</span>
+                                                    <span class="font-num">2100000</span>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-12 detail-investment">
+                                                <div class="panel-font">中央投资</div>
+                                                <div>
+                                                    <span>￥</span>
+                                                    <span class="font-num">2100000</div>
+                                            </div>
+                                            <div class="col-lg-12">
+                                                <div class="col-lg-6 detail-investment">
+                                                    <div class="panel-font">当前投资</div>
+                                                    <div class="total-investment">
+                                                        <span>￥</span>
+                                                        <span class="font-num">2100000</span>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 detail-investment under-pie">
+                                                    <div class="panel-font">总投资</div>
+                                                    <div class="total-investment">
+                                                        <span>￥</span>
+                                                        <span class="font-num">2100000</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 map-investment">
+                                            <div id="investment_chart" style='width: 200px;height:250px;'></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第二个悬浮框 -->
+                    <div class="tabs-container" id="container2">
+                        <ul class="nav nav-tabs">
+                            <li class="col-lg-6 col-md-6 active">
+                                <a data-toggle="tab" href="#tab-1" aria-expanded="true">
+                                    <i class="fa fa-laptop"></i>
+                                    <span class="control-tips">待办</span>
+                                </a>
+                            </li>
+                            <li class="col-lg-6 col-md-6">
+                                <a data-toggle="tab" href="#tab-2" aria-expanded="false">
+                                    <i class="fa fa-desktop"></i>
+                                    <span class="control-tips">申请</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="tab-content">
+                            <div id="tab-1" class="tab-pane active">
+                                <div class="panel-body">
+                                    <table class="table table-hover no-margins">
+                                        <thead>
+                                            <tr>
+                                                <th title="水库">
+                                                    <i class="fa fa-adjust table-icon"></i>水库</th>
+                                                <th title="上报时间">
+                                                    <i class="fa fa-clock-o table-icon"></i>上报时间</th>
+                                                <th title="水库法人">
+                                                    <i class="fa fa-user-o table-icon" aria-hidden="true"></i>水库法人</th>
+                                                <th title="拨付金额">
+                                                    <i class="fa fa-cny table-icon"></i>拨付金额(万元)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="commission_detail">
+                                            <tr>
+                                                <td title="小河水库">
+                                                    <a>小河水库</a>
+                                                </td>
+                                                <td>
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-03-18
+                                                </td>
+                                                <td title="张三">张三</td>
+                                                <td class="text-navy" title="1000000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥1000000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="铜仁水库">
+                                                    <!-- <span class="label label-warning">铜仁水库</span> -->
+                                                    <a>铜仁水库</a>
+                                                </td>
+                                                <td title="2017-01-06">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-01-06
+                                                </td>
+                                                <td title="李四">李四</td>
+                                                <td class="text-navy" title="500000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥500000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="思南水库">
+                                                    <a>思南水库</a>
+                                                </td>
+                                                <td title="2017-11-12">
+                                                    <!-- <i class="fa fa-clock-o"></i>  -->
+                                                    2017-11-12
+                                                </td>
+                                                <td title="王二">王二</td>
+                                                <td class="text-navy" title="2155000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥2155000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="黔东南水库">
+                                                    <a>黔东南水库</a>
+                                                </td>
+                                                <td title="2017-10-12">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-10-12
+                                                </td>
+                                                <td title="赵四">赵四</td>
+                                                <td class="text-navy" title="983000">
+                                                    <!-- <i class="fa fa-level-up"></i>  -->
+                                                    ￥983000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a title="遵义水库">遵义水库</a>
+                                                </td>
+                                                <td>
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2016-09-20
+                                                </td>
+                                                <td title="孙五">孙五</td>
+                                                <td class="text-navy" title="764000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥764000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="毕节水库">
+                                                    <!-- <span class="label label-primary">Completed</span> -->
+                                                    <a>毕节水库</a>
+                                                </td>
+                                                <td title="2017-05-23">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-05-23
+                                                </td>
+                                                <td title="李六一">李六一</td>
+                                                <td class="text-navy" title="870000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥870000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="织金水库">
+                                                    <!-- <small>Pending...</small> -->
+                                                    <a>织金水库</a>
+                                                </td>
+                                                <td title="2015-11-23">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2015-11-23
+                                                </td>
+                                                <td title="张三">钱九</td>
+                                                <td class="text-navy" title="760000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥760000
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!--              ***************************我的待办**************************************            -->
+                            <div id="tab-2" class="tab-pane">
+                                <div class="panel-body">
+                                    <table class="table table-hover no-margins">
+                                        <thead>
+                                            <tr>
+                                                <th title="水库">
+                                                    <i class="fa fa-adjust table-icon"></i>水库</th>
+                                                <th title="上报时间">
+                                                    <i class="fa fa-clock-o table-icon"></i>上报时间</th>
+                                                <th title="水库法人">
+                                                    <i class="fa fa-user-o table-icon" aria-hidden="true"></i>水库法人</th>
+                                                <th title="拨付金额">
+                                                    <i class="fa fa-cny table-icon"></i>预算(万元)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="application_detail">
+                                            <tr>
+                                                <td title="小河水库">
+                                                    <a>小河水库</a>
+                                                </td>
+                                                <td>
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-03-18
+                                                </td>
+                                                <td title="张三">张三</td>
+                                                <td class="text-navy" title="1000000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥1000000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="铜仁水库">
+                                                    <!-- <span class="label label-warning">铜仁水库</span> -->
+                                                    <a>铜仁水库</a>
+                                                </td>
+                                                <td title="2017-01-06">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-01-06
+                                                </td>
+                                                <td title="李四">李四</td>
+                                                <td class="text-navy" title="500000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥500000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="思南水库">
+                                                    <a>思南水库</a>
+                                                </td>
+                                                <td title="2017-11-12">
+                                                    <!-- <i class="fa fa-clock-o"></i>  -->
+                                                    2017-11-12
+                                                </td>
+                                                <td title="王二">王二</td>
+                                                <td class="text-navy" title="2155000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥2155000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="黔东南水库">
+                                                    <a>黔东南水库</a>
+                                                </td>
+                                                <td title="2017-10-12">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-10-12
+                                                </td>
+                                                <td title="赵四">赵四</td>
+                                                <td class="text-navy" title="983000">
+                                                    <!-- <i class="fa fa-level-up"></i>  -->
+                                                    ￥983000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <a title="遵义水库">遵义水库</a>
+                                                </td>
+                                                <td>
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2016-09-20
+                                                </td>
+                                                <td title="孙五">孙五</td>
+                                                <td class="text-navy" title="764000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥764000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="毕节水库">
+                                                    <!-- <span class="label label-primary">Completed</span> -->
+                                                    <a>毕节水库</a>
+                                                </td>
+                                                <td title="2017-05-23">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2017-05-23
+                                                </td>
+                                                <td title="李六一">李六一</td>
+                                                <td class="text-navy" title="870000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥870000
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td title="织金水库">
+                                                    <!-- <small>Pending...</small> -->
+                                                    <a>织金水库</a>
+                                                </td>
+                                                <td title="2015-11-23">
+                                                    <!-- <i class="fa fa-clock-o"></i> -->
+                                                    2015-11-23
+                                                </td>
+                                                <td title="张三">钱九</td>
+                                                <td class="text-navy" title="760000">
+                                                    <!-- <i class="fa fa-level-up"></i> -->
+                                                    ￥760000
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--              ***************************总概览**************************************            -->
+                    <div class="tabs-container" id="container3">
+                        <div class="overview-panel">
+                            <div class="overview-data">
+                                <div class="col-lg-6 overview-block">
+                                    <div>
+                                        <div>工程总投资</div>
+                                        <div class="cost-detail">
+                                            <span class="font-num">5000</span>
+                                            <span>(万元)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 overview-block">
+                                    <div>
+                                        <div>工程投资累计完成量</div>
+                                        <div class="cost-detail">
+                                            <span class="font-num">7000</span>
+                                            <span>(万元)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 overview-block">
+                                    <div>
+                                        <div>本年度工程投资完成量</div>
+                                        <div class="cost-detail">
+                                            <span class="font-num">1000</span>
+                                            <span>(万元)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 overview-block">
+                                    <div>
+                                        <div>本年度计划投资完成量</div>
+                                        <div class="cost-detail">
+                                            <span class="font-num">800</span>
+                                            <span>(万元)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="overview-map">
+                                <!-- <div id="overview_map" style="height: 400px;width: 350px;margin: 0 auto;"></div> -->
+                                <div class="col-lg-6">
+                                    <div class="map-title">
+                                        <span>投资分布图</span>
+                                    </div>
+                                    <div id="region_pie" style="height: 230px; width: 220px;"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="map-title">
+                                        <span>明星工程(前五)</span>
+                                    </div>
+                                    <div id="program_funnel" style="height: 230px;width: 220px;"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="map-title">
+                                        <span>项目状态统计图</span>
+                                    </div>
+                                    <div id="program_status" style="height: 230px;width: 220px;"></div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="map-title">
+                                        <span>各项目进度图</span>
+                                    </div>
+                                    <div id="program_investment" style="height: 230px;width: 220px;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer">
+                <div class="pull-right">
+                    10GB of
+                    <strong>250GB</strong> Free.
+                </div>
+                <div>
+                    <strong>Copyright</strong> Example Company &copy; 2014-2017
+                </div>
+            </div>
+        </div>
+        <div id="right-sidebar">
+            <div class="sidebar-container">
+
+                <ul class="nav nav-tabs navs-3">
+
+                    <li class="active">
+                        <a data-toggle="tab" href="#tab-1">
+                            Notes
+                        </a>
+                    </li>
+                    <li>
+                        <a data-toggle="tab" href="#tab-2">
+                            Projects
+                        </a>
+                    </li>
+                    <li class="">
+                        <a data-toggle="tab" href="#tab-3">
+                            <i class="fa fa-gear"></i>
+                        </a>
+                    </li>
+                </ul>
+
+                <div class="tab-content">
+
+
+                    <div id="tab-1" class="tab-pane active">
+
+                        <div class="sidebar-title">
+                            <h3>
+                                <i class="fa fa-comments-o"></i> Latest Notes</h3>
+                            <small>
+                                <i class="fa fa-tim"></i> You have 10 new message.</small>
+                        </div>
+
+                        <div>
+
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a1.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+
+                                        There are many variations of passages of Lorem Ipsum available.
+                                        <br>
+                                        <small class="text-muted">Today 4:21 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a2.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        The point of using Lorem Ipsum is that it has a more-or-less normal.
+                                        <br>
+                                        <small class="text-muted">Yesterday 2:45 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        Mevolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                        <br>
+                                        <small class="text-muted">Yesterday 1:10 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    </div>
+
+                                    <div class="media-body">
+                                        Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the
+                                        <br>
+                                        <small class="text-muted">Monday 8:37 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a8.jpg">
+                                    </div>
+                                    <div class="media-body">
+
+                                        All the Lorem Ipsum generators on the Internet tend to repeat.
+                                        <br>
+                                        <small class="text-muted">Today 4:21 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a7.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                        <br>
+                                        <small class="text-muted">Yesterday 2:45 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a3.jpg">
+
+                                        <div class="m-t-xs">
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                            <i class="fa fa-star text-warning"></i>
+                                        </div>
+                                    </div>
+                                    <div class="media-body">
+                                        The standard chunk of Lorem Ipsum used since the 1500s is reproduced below.
+                                        <br>
+                                        <small class="text-muted">Yesterday 1:10 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="sidebar-message">
+                                <a href="#">
+                                    <div class="pull-left text-center">
+                                        <img alt="image" class="img-circle message-avatar" src="img/a4.jpg">
+                                    </div>
+                                    <div class="media-body">
+                                        Uncover many web sites still in their infancy. Various versions have.
+                                        <br>
+                                        <small class="text-muted">Monday 8:37 pm</small>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div id="tab-2" class="tab-pane">
+
+                        <div class="sidebar-title">
+                            <h3>
+                                <i class="fa fa-cube"></i> Latest projects</h3>
+                            <small>
+                                <i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                        </div>
+
+                        <ul class="sidebar-list">
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Business valuation</h4>
+                                    It is a long established fact that a reader will be distracted.
+
+                                    <div class="small">Completion with: 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Contract with Company </h4>
+                                    Many desktop publishing packages and web page editors.
+
+                                    <div class="small">Completion with: 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Meeting</h4>
+                                    By the readable content of a page when looking at its layout.
+
+                                    <div class="small">Completion with: 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-primary pull-right">NEW</span>
+                                    <h4>The generated</h4>
+                                    There are many variations of passages of Lorem Ipsum available.
+                                    <div class="small">Completion with: 22%</div>
+                                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Business valuation</h4>
+                                    It is a long established fact that a reader will be distracted.
+
+                                    <div class="small">Completion with: 22%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 22%;" class="progress-bar progress-bar-warning"></div>
+                                    </div>
+                                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Contract with Company </h4>
+                                    Many desktop publishing packages and web page editors.
+
+                                    <div class="small">Completion with: 48%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 48%;" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <div class="small pull-right m-t-xs">9 hours ago</div>
+                                    <h4>Meeting</h4>
+                                    By the readable content of a page when looking at its layout.
+
+                                    <div class="small">Completion with: 14%</div>
+                                    <div class="progress progress-mini">
+                                        <div style="width: 14%;" class="progress-bar progress-bar-info"></div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <span class="label label-primary pull-right">NEW</span>
+                                    <h4>The generated</h4>
+                                    There are many variations of passages of Lorem Ipsum available.
+                                    <div class="small">Completion with: 22%</div>
+                                    <div class="small text-muted m-t-xs">Project end: 4:00 pm - 12.06.2014</div>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+
+                    <div id="tab-3" class="tab-pane">
+
+                        <div class="sidebar-title">
+                            <h3>
+                                <i class="fa fa-gears"></i> Settings</h3>
+                            <small>
+                                <i class="fa fa-tim"></i> You have 14 projects. 10 not completed.</small>
+                        </div>
+
+                        <div class="setings-item">
+                            <span>
+                                Show notifications
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example">
+                                    <label class="onoffswitch-label" for="example">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Disable Chat
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" checked class="onoffswitch-checkbox" id="example2">
+                                    <label class="onoffswitch-label" for="example2">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Enable history
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example3">
+                                    <label class="onoffswitch-label" for="example3">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Show charts
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example4">
+                                    <label class="onoffswitch-label" for="example4">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Offline users
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example5">
+                                    <label class="onoffswitch-label" for="example5">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Global search
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" checked name="collapsemenu" class="onoffswitch-checkbox" id="example6">
+                                    <label class="onoffswitch-label" for="example6">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="setings-item">
+                            <span>
+                                Update everyday
+                            </span>
+                            <div class="switch">
+                                <div class="onoffswitch">
+                                    <input type="checkbox" name="collapsemenu" class="onoffswitch-checkbox" id="example7">
+                                    <label class="onoffswitch-label" for="example7">
+                                        <span class="onoffswitch-inner"></span>
+                                        <span class="onoffswitch-switch"></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="sidebar-content">
+                            <h4>Settings</h4>
+                            <div class="small">
+                                I belive that. Lorem Ipsum is simply dummy text of the printing and typesetting industry. And typesetting industry. Lorem
+                                Ipsum has been the industry's standard dummy text ever since the 1500s. Over the years, sometimes
+                                by accident, sometimes on purpose (injected humour and the like).
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 弹出层 -->
+    <div id="dialog" class="dialog-hide" style="height: 400px; width: 600px;"></div>
+    <!-- 遮罩层 -->
+    <div id="mask" class="mask-position" onclick="closeDialog()"></div>
+    <!-- 全屏层 -->
+    <div id="fullscreen_map" style="display: none;"></div>
+    <!-- 菜单选择层 -->
+    <div id="region_select" class="animated fadeInRight">
+        <div class="first-region">
+            <span class="triangle"></span>
+            <ul>
+                <li>
+                    <a href="#">test1</a>
+                    <span>
+                        <i class="fa fa-angle-right"></i>
+                    </span>
+                </li>
+                <li>
+                    <a href="#">test1</a>
+                    <span>
+                        <i class="fa fa-sort-asc"></i>
+                    </span>
+                </li>
+                <li>
+                    <a href="#">test1</a>
+                </li>
+                <li>
+                    <a href="#">test1</a>
+                </li>
+                <li>
+                    <a href="#">test1</a>
+                </li>
+            </ul>
+            <div class="second-region animated fadeInUp">
+                <ul>
+                    <li>
+                        <a href="#">二级</a>
+                    </li>
+                    <li>
+                        <a href="#">二级</a>
+                    </li>
+                    <li>
+                        <a href="#">二级</a>
+                    </li>
+                </ul>
+                <div class="third-region animated fadeInUp">
+                    <ul>
+                        <li>
+                            <a href="#">三级</a>
+                        </li>
+                        <li>
+                            <a href="#">三级</a>
+                        </li>
+                        <li>
+                            <a href="#">三级</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Mainly scripts -->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+    <!-- Flot -->
+    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.spline.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/jquery.flot.symbol.js"></script>
+    <script src="js/plugins/flot/jquery.flot.time.js"></script>
+
+    <!-- Peity -->
+    <script src="js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="js/demo/peity-demo.js"></script>
+
+    <!-- Custom and plugin javascript -->
+    <script src="js/inspinia.js"></script>
+    <script src="js/plugins/pace/pace.min.js"></script>
+
+    <!-- jQuery UI -->
+    <script src="js/plugins/jquery-ui/jquery-ui.min.js"></script>
+
+    <!-- Jvectormap -->
+    <script src="js/plugins/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="js/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
+    <!-- EayPIE -->
+    <script src="js/plugins/easypiechart/jquery.easypiechart.js"></script>
+
+    <!-- Sparkline -->
+    <script src="js/plugins/sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Sparkline demo data  -->
+    <script src="js/demo/sparkline-demo.js"></script>
+
+    <!-- echarts -->
+    <script src="js/echarts.min.js"></script>
+    <script src="js/bmap.min.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/guizhou.js"></script>
+    <script src="http://api.map.baidu.com/api?v=2.0&ak=ZUONbpqGBsYGXNIYHicvbAbM"></script>
+
+    <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- slick carousel-->
+    <script src="js/plugins/slick/slick.min.js"></script>
+
+    <link href="css/plugins/jqGrid/ui.jqgrid.css" rel="stylesheet">
+    <link href="css/plugins/jQueryUI/jquery-ui-1.10.4.custom.min.css" rel="stylesheet">
+    <!-- jqGrid -->
+    <script src="js/plugins/jqGrid/i18n/grid.locale-en.js"></script>
+    <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
+
+    <style>
+        .slick_demo_2 .ibox-content {
+            margin: 0 10px;
+        }
+    </style>
+
+
+    <script>
+        /*var map = new BMap.Map("allmap");
+            var point = new BMap.Point(116.331398,39.897445);
+            map.centerAndZoom(point,12); */
+        /*
+        var marker = new BMap.Marker(point);        // 创建标注    
+        map.addOverlay(marker); */                    // 将标注添加到地图中
+
+        // 百度地图API功能
+        var map = new BMap.Map("allmap", { mapType: BMAP_HYBRID_MAP });
+        var point = new BMap.Point(106.630905, 26.674511);
+        map.centerAndZoom(point, 8); // 初始化地图，设置中心店坐标和地图级别
+
+
+        map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+
+        //向地图中添加缩放控件
+        var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+        map.addControl(ctrl_nav);
+
+
+        map.setCurrentCity("贵阳");
+        map.enableScrollWheelZoom(true);
+
+        //控制地图的最大和最小缩放级别
+        map.setMinZoom(8);
+        //map.setMaxZoom(18);
+
+        var b = new BMap.Bounds(new BMap.Point(100.971724, 22.841621), new BMap.Point(112.240069, 30.343001)); // 范围 左下角，右上角的点位置 
+        try {    // js中尽然还有try catch方法，可以避免bug引起的错误
+            BMapLib.AreaRestriction.setBounds(map, b); // 已map为中心，已b为范围的地图
+        } catch (e) {
+            // 捕获错误异常
+            alert(e);
+        }
+        /*  function setMapViewPort(data) {
+             var points = [];
+             $.each(data, function(i, n) {
+                 points.push(createMarker(n));
+             });
+             map.setViewport(points);
+         } */
+        // 地图打点
+        function createMarker(data, icon) {
+            var img = "icon/水库点.png";
+            /* switch (data.scale) {
+                case "大型":
+                    img = "icon/水库_红.png";
+                    break;
+                case "中型":
+                    img = "icon/水库_橙.png";
+                    break;
+                case "小型":
+                    img = "icon/水库点.png";
+                    break;
+                default:
+                    break;
+            } */
+            icon && (img = icon);
+            var myIcon = new BMap.Icon(img, new BMap.Size(25, 25), {
+                // 指定定位位置。   
+                // 当标注显示在地图上时，其所指向的地理位置距离图标左上    
+                // 角各偏移10像素和25像素。您可以看到在本例中该位置即是   
+                // 图标中央下端的尖角位置。    
+                // anchor: new BMap.Size(10, 25),
+                // 设置图片偏移。   
+                // 当您需要从一幅较大的图片中截取某部分作为标注图标时，您   
+                // 需要指定大图的偏移位置，此做法与css sprites技术类似。    
+                // imageOffset: new BMap.Size(0, 0 - 25)   // 设置图片偏移    
+                //图标大小
+                imageSize: new BMap.Size(25, 25)
+            });
+            // 创建标注对象并添加到地图   
+            var point_item = new BMap.Point(data.longitude, data.latitude);
+            var marker = new BMap.Marker(point_item, { icon: myIcon });
+            // var marker = new BMap.Marker(point_item);
+            marker.disableMassClear();
+            map.addOverlay(marker);
+
+            // 定义展示数据
+            var str = [
+                "<div class='map-tips'><label>水库：</label><span class='plant-name'>" + data.plant_name + "</span></div>",
+                "<div class='map-tips'><label>位置：</label><span>" + data.location + "</span></div>",
+                // "<label>类型:</label><span>" + data.dam_type + "</span><br/>",
+                "<div class='map-tips'><label>规模：</label><span>" + data.scale + "</span></div>",
+                "<div class='map-tips'><label>等级：</label><span>" + data.level + "</span></div>"
+                // "<label>用途:</label><span>" + data.project_task + "</span>"
+            ]
+            var detail = str.join("");
+
+            // 设置点击事件
+            marker.addEventListener("click", function () {
+                addProjectDetail(data);
+                // 默认选择概述项标签
+                $("#container1").find("li:first").addClass("active").siblings().removeClass("active");
+                // 默认选择概述项内容
+                $("#tab-3").addClass("active").siblings().removeClass("active");
+                if (!$("#container1").hasClass("active")) {
+                    $("#toggle1").click();
+                }
+                $(".overview-video").addClass("video-show");
+                initItemVideo();
+            });
+
+            // 设置鼠标hover事件
+            marker.addEventListener("mouseover", function (e) {
+                var label = new BMap.Label(detail, { offset: new BMap.Size(20, 20) });//为标注设置一个标签
+                label.setStyle({
+                    width: "auto",
+                    color: '#000',
+                    background: '#fff',
+                    border: '1px solid "#fff"',
+                    borderRadius: "3px",
+                    // textAlign: "center",
+                    height: "auto",
+                    textAlign: "left",
+                    padding: "5px"
+                    //lineHeight: "26px"
+                });
+                marker.setLabel(label);
+                /* var opts = { width: 120, height: 150, title: "详细信息" };
+                var infoWindow = new BMap.InfoWindow(detail, opts);
+                map.openInfoWindow(infoWindow, point); */
+            });
+
+            // 设置鼠标离开事件
+            marker.addEventListener("mouseout", function (e) {
+                var label = this.getLabel();
+                label.setContent("");//设置标签内容为空
+                label.setStyle({ border: "none", width: "0px", padding: "0px" });//设置标签边框宽度为0
+            });
+
+            /*  marker.addEventListener("mouseout", function (e) {
+                 map.closeInfoWindow();//设置标签内容为空
+             }); */
+            return point_item;
+        }
+
+        // var allData = [[106.630905, 26.674511, "小石", "28y", "170cm", "70kg"], [108.259864, 27.944777, "小王", "28y", "160cm", "50kg"]];
+        var allData = [{ "latitude": 26.9852206, "longitude": 107.7936172, "plant_name": "黄平县印地坝水库", "location": "黄平县旧州镇境内", "dam_type": "碾压混凝土重力坝", "legal_representative_name": "黔东南州水利投资有限责任公司", "scale": "中型", "level": "Ⅲ", "overview": "黄平县印地坝水库工程位于黄平县旧州镇境内，坝址位于舞阳河支流冷水河段，水库正常蓄水位720m，死水位693m，设计洪水位722.24m（P=2%），校核洪水位723.27m（P=0.2%）；水库总库容为1462万m3，正常蓄水位相应库容为1154万m3，死库容为50万m3，兴利库容为1104万m3。印地坝水库是以城镇供水、农田灌溉和农村人畜饮水为建设任务的中型水库工程。", "central_accumulative_payment": "中央累计拨付", "central_investment": "中央投资", "local_accumulative_payment": "当前累计拨付", "local_investment": "当前投资", "provincial_investment": "省政府投资", "provincial_loan": "省政府贷款", "total_investment": "总投资", "project_task": "主要任务：城镇供水；农田灌溉和农村人畜饮水。\n主要建筑物：水库枢纽工程由碾压混凝土重力坝、坝顶溢流表孔、坝 身取水兼放空建筑物及右岸山体处理等组成。" },
+        { "latitude": 27.270933, "longitude": 108.383663, "plant_name": "镇远县天印水库", "location": "镇远县都坪镇天印村", "scale": "大型", "dam_type": "碾压混凝土重力坝", "legal_representative_name": "黔东南州水利投资有限责任公司", "level": "Ⅲ", "overview": "天印水库拟建于龙江河中游右岸一级支流龙洞河上，坝址在镇远县都坪镇天印村，距龙洞河汇口约4km。天印水库坝址以上集雨面积85.3km2，多年平均年径流量4644万m3，多年平均流量1.47 m3/s，水库具有年调节性能。水库正常蓄水位592.5m，相应库容941万m3，死水位568.5m，死库容67万m3，兴利库容874万m3，总库容1074万m3。水库工程等别为III等，工程规模为中型。 天印水库工程任务为供水、灌溉。水库供水范围为镇远县的都坪、江古和岑巩县的龙田、平庄4个乡镇，设计水平年（2030年）总", "central_accumulative_payment": "中央累计拨付", "central_investment": "中央投资", "local_accumulative_payment": "当前累计拨付", "local_investment": "当前投资", "provincial_investment": "省政府投资", "provincial_loan": "省政府贷款", "total_investment": "总投资", "project_task": "" }]
+        var points = [];
+        for (var i = 0; i < allData.length; i++) {
+            points.push(createMarker(allData[i]));
+        }
+        map.setViewport(points);
+        // setMapViewPort(allData);
+        /* $(function () {
+
+            var allData = [[106.630905, 26.674511, "小石", "28y", "170cm", "70kg"], [108.259864, 27.944777, "小王", "28y", "160cm", "50kg"]];
+            for (var i = 0; i < allData.length; i++) {
+                createMarker(allData[i]);
+            }
+
+        }); */
+        // 行政区覆盖
+        function getBoundary1(regionName) {
+            var bdary = new BMap.Boundary();
+            bdary.get(regionName, function (rs) {       //获取行政区域
+                map.clearOverlays();        //清除地图覆盖物       
+                var count = rs.boundaries.length; //行政区域的点有多少个
+                var path = [];
+                for (var i = 0; i < count; i++) {
+                    var ply = new BMap.Polygon(rs.boundaries[i], { strokeWeight: 1, strokeColor: "#fff", fillColor: "#10190e" }); //建立多边形覆盖物
+                    map.addOverlay(ply);  //添加覆盖物
+                    // map.setViewport(ply.getPath());    //调整视野     
+                    path = path.concat(ply.getPath());
+                    debugger;
+                }
+                map.setViewport(path);    //调整视野      
+                // setZoom(ply.getPath());
+            });
+        }
+        function getBoundary(regionName) {
+            var bdary = new BMap.Boundary();
+            bdary.get(regionName, function (rs) {       //获取行政区域
+                map.clearOverlays();
+                var points = rs.boundaries;
+                //包含所有区域的点数组
+                var pointArray = [];
+
+                /*画遮蔽层的相关方法
+                *思路: 首先在中国地图最外画一圈，圈住理论上所有的中国领土，然后再将每个闭合区域合并进来，并全部连到西北角。
+                *      这样就做出了一个经过多次西北角的闭合多边形*/
+                //定义中国东南西北端点，作为第一层
+                var pNW = { lat: 59.0, lng: 73.0 }
+                var pNE = { lat: 59.0, lng: 136.0 }
+                var pSE = { lat: 3.0, lng: 136.0 }
+                var pSW = { lat: 3.0, lng: 73.0 }
+                //向数组中添加一次闭合多边形，并将西北角再加一次作为之后画闭合区域的起点
+                var pArray = [];
+                pArray.push(pNW);
+                pArray.push(pSW);
+                pArray.push(pSE);
+                pArray.push(pNE);
+                pArray.push(pNW);
+                var path = [];
+                //循环添加各闭合区域
+                for (var i = 0; i < points.length; i++) {
+                    //添加多边形层并显示
+                    var ply = new BMap.Polygon(points[i], { strokeWeight: 2, strokeColor: "#1ab394", fillOpacity: 0.01, fillColor: " #FFFFFF" }); //建立多边形覆盖物
+                    map.addOverlay(ply);
+
+                    //将点增加到视野范围内
+                    var path = ply.getPath();
+                    pointArray = pointArray.concat(path);
+                    //将闭合区域加到遮蔽层上，每次添加完后要再加一次西北角作为下次添加的起点和最后一次的终点
+                    pArray = pArray.concat(path);
+                    pArray.push(pArray[0]);
+                }
+               
+                //添加遮蔽层
+                var plyall = new BMap.Polygon(pArray, { strokeOpacity: 0.0000001, strokeColor: "#000000", strokeWeight: 0.00001, fillColor: "#000000", fillOpacity: 0.4 }); //建立多边形覆盖物
+                map.addOverlay(plyall);
+
+                map.setViewport(pointArray);
+            });
+        }
+        /**
+         *  通过地图坐标点计算缩放等级      行政区域另外一种覆盖方式
+         */
+        //根据原始数据计算中心坐标和缩放级别，并为地图设置中心坐标和缩放级别。
+        function setZoom(points) {
+            if (points.length > 0) {
+                var maxLng = points[0].lng;
+                var minLng = points[0].lng;
+                var maxLat = points[0].lat;
+                var minLat = points[0].lat;
+                var res;
+                for (var i = points.length - 1; i >= 0; i--) {
+                    res = points[i];
+                    if (res.lng > maxLng) maxLng = res.lng;
+                    if (res.lng < minLng) minLng = res.lng;
+                    if (res.lat > maxLat) maxLat = res.lat;
+                    if (res.lat < minLat) minLat = res.lat;
+                };
+                var cenLng = (parseFloat(maxLng) + parseFloat(minLng)) / 2;
+                var cenLat = (parseFloat(maxLat) + parseFloat(minLat)) / 2;
+                var zoom = getZoom(maxLng, minLng, maxLat, minLat);
+                map.centerAndZoom(new BMap.Point(cenLng, cenLat), zoom);
+            } else {
+                //没有坐标，显示全中国
+                map.centerAndZoom(new BMap.Point(103.388611, 35.563611), 5);
+            }
+        }
+        //根据经纬极值计算绽放级别。
+        function getZoom(maxLng, minLng, maxLat, minLat) {
+            var zoom = ["50", "100", "200", "500", "1000", "2000", "5000", "10000", "20000", "25000", "50000", "100000", "200000", "500000", "1000000", "2000000"]//级别18到3。
+            var pointA = new BMap.Point(maxLng, maxLat);  // 创建点坐标A
+            var pointB = new BMap.Point(minLng, minLat);  // 创建点坐标B
+            var distance = map.getDistance(pointA, pointB).toFixed(1);  //获取两点距离,保留小数点后两位
+            for (var i = 0, zoomLen = zoom.length; i < zoomLen; i++) {
+                if (zoom[i] - distance > 0) {
+                    return 18 - i + 3;//之所以会多3，是因为地图范围常常是比例尺距离的10倍以上。所以级别会增加3。
+                }
+            };
+        }
+    </script>
+    <script type="text/javascript">
+        /**
+         *  关闭地图数据的下拉面板
+         */
+        function closeItemPanel() {
+            $("#itemDetails").slideUp();
+        }
+        /**
+          *  概览数据添加
+          */
+        function addSurveyData(data) {
+            $("#total_budget").text(data[0]);
+            $("#total_investment").text(data[1]);
+            $("#finish_investment").text(data[2]);
+            $("#actual_investment").text(data[3]);
+        }
+
+        /**
+          *  代办信息
+          */
+        function addCommission(data) {
+            var strHtml = [];
+            $.each(data, function (i, n) {
+                var str = [
+                    '<tr><td title="' + n.plant_name + '">',
+                    '<a>' + n.plant_name + '</a></td>',
+                    '<td title="' + n.update_time + '">' + n.update_time + '</td>',
+                    '<td title="' + n.legal_representative_name + '">' + n.legal_representative_name + '</td>',
+                    '<td class="text-navy" title="' + n.local_accumulative_payment + '">' + n.local_accumulative_payment + '</td></tr>'
+                ];
+                strHtml.push(str.join(""));
+            })
+            $("#commission_detail").html(strHtml.join(""));
+        }
+
+        /**
+          *  申请信息
+          */
+        function addApplication(data) {
+            var strHtml = [];
+            $.each(data, function (i, n) {
+                var str = [
+                    '<tr><td title="' + n.plant_name + '">',
+                    '<a>' + n.plant_name + '</a></td>',
+                    '<td title="' + n.update_time + '">' + n.update_time + '</td>',
+                    '<td title="' + n.legal_representative_name + '">' + n.legal_representative_name + '</td>',
+                    '<td class="text-navy" title="' + n.total_investment + '">' + n.total_investment + '</td></tr>'
+                ];
+                strHtml.push(str.join(""));
+            });
+            $("#application_detail").html(strHtml.join(""));
+        }
+
+        /**
+         *  项目概述
+         */
+        function addProjectDetail(data) {
+            var strHtml = [
+                '<div class="panel-detail-title">' + data.plant_name + '</div>',
+                '<div class="col-lg-12 panel-item"><div><label>水库规模：</label>',
+                '<span id="scale_show">' + data.scale + '</span></div>',
+                ' <div><label>水库等级：</label>',
+                '<span id="level_show">' + data.level + '</span></div>',
+                '<div><label>所属单位：</label>',
+                '<span id="legal_representative_name_show">' + data.legal_representative_name + '</span></div>',
+                '<div><label>所在位置：</label>',
+                '<span id="location_show">' + data.location + '</span></div>',
+                '<div><label>主要功能：</label>',
+                '<span id="project_task_show">' + data.project_task + '</span></div>',
+                '<div><label>水库概述：</label>',
+                '<span id="overview_show">' + data.overview + '</span></div>'
+            ]
+            $("#plant_name").text(data.plant_name);
+            $("#item_detail>.item-detail").html(strHtml.join(""));
+            // $("#item_detail").html(strHtml.join(""));
+            // 设置更多详情的跳转id
+            $(".all-details>a").attr("project-id", data.baseInfoId);
+        }
+
+        /**
+          *     弹出框初步JS
+          */
+        function openDialog() {
+            // 弹出层
+            $("#dialog").html('<div>twafsdgewwadsgfsaegjioajsfdosjafoaslfnsalkgnmsdoizajgpoiewjapokdsaglkjfdspogjewpkfdsp</div><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal5" onclick="openDialog()">test Modal</button>');
+            var dialogHtml = [
+                // 头部标题栏
+                '<div class="modal-header">dialog_header',
+                '<button type="button" class="close" data-dismiss="modal" onclick="closeDialog()"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>',
+                '</div>',
+                // 弹出框内容区
+                '<div class="modal-body">dialog_body</div>',
+                // 弹出框操作区
+                '<div class="modal-footer"><button type="button" class="btn btn-white" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div>'
+            ]
+            $("#dialog").html(dialogHtml.join(""));
+            var height = $("#dialog").height(),
+                width = $("#dialog").width();
+            $("#dialog").addClass("dialog-position");
+            $("#dialog").css({ "margin-top": -height / 2, "margin-left": -width / 2 });
+            $("#dialog").removeClass("dialog-hide");
+            // $("#dialog").slideDown();
+            // 遮罩层
+            $("#mask").show();
+        }
+        // 关闭弹出框
+        function closeDialog() {
+            $("#dialog").addClass("dialog-hide");
+            $("#mask").hide();
+        }
+
+        // 全屏JS
+        function fullScreen() {
+            $("#fullscreen_map").toggleClass("full-screen");
+            $("#fullscreen_map").show();
+            $("body").toggleClass("hide-body");
+        }
+
+        // 动画
+        function toggleMove(id) {
+            $('.right-panel').stop().animate({ marginRight: "-450px" }, 300);
+            setTimeout(function () {
+                if (!$("[id=" + id + "]").hasClass("active")) {
+                    $("[id=" + id + "]").siblings().removeClass('active');
+                    $('.right-panel').stop().animate({ marginRight: "0" }, 500);
+                }
+                $("[id=" + id + "]").toggleClass('active');
+            }, 500);
+        }
+
+        // 标签动画
+        function moveInTip(id) {
+            $("[id='" + id + "']").animate({ width: "90px" }, 150);
+        }
+        function moveOutTip(id) {
+            $("[id='" + id + "']").animate({ width: "20px" }, 150);
+        }
+        // 饼图
+        function initPieChart(id, chartData) {
+            var myChart = echarts.init(document.getElementById(id));
+
+            var legendData = [];
+            $.each(chartData, function (i, n) {
+                legendData.push(n.name);
+            });
+            var option = {
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "<div style='text-align:left'>{b} <br/>￥{c}({d}%)</div>"
+                },
+                legend: {
+                    orient: 'vertical',
+                    x: 'left',
+                    data: legendData,
+                    show: false
+                },
+                series: [
+                    {
+                        name: '资金',
+                        type: 'pie',
+                        radius: ['50%', '70%'],
+                        avoidLabelOverlap: false,
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'center'
+                            },
+                            emphasis: {
+                                show: true,
+                                textStyle: {
+                                    fontSize: '14',
+                                    fontWeight: 'bold'
+                                }
+                            }
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        data: chartData
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            console.log('success, done');
+        }
+        // 柱状图
+        function initBarChart(id) {
+            var myChart = echarts.init(document.getElementById(id));
+            var option = {
+                color: ['#fff'],
+                tooltip: {
+                    trigger: 'axis',
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    },
+                    formatter: "<div style='text-align:left'>{b}<br/>￥{c}(万元)</div>"
+                },
+                grid: {
+                    left: '3%',
+                    right: '4%',
+                    bottom: '3%',
+                    containLabel: true
+                },
+                xAxis: [
+                    {
+                        type: 'category',
+                        data: ['总概算', '总项目投资', '实际投资完成量', '实际投资拨付'],
+                        axisTick: {
+                            alignWithLabel: true
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                // 使用深浅的间隔色
+                                color: '#565656'
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#fff',
+                                fontFamily: 'Microsoft YaHei'
+                            }
+                        }
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        axisTick: {
+                            show: false
+                        },
+                        // y 轴线
+                        axisLine: {
+                            show: false,
+                        },
+                        splitLine: {
+                            show: true,  //显示分割线     
+                            lineStyle: {
+                                // 使用深浅的间隔色
+                                color: '#565656',
+                                type: 'dotted'
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#f0ab58',
+                                fontFamily: 'Lccd'
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: '资金',
+                        type: 'bar',
+                        barWidth: '50%',
+                        data: [5000, 7000, 1000, 800],
+                        itemStyle: {
+                            normal: {
+                                color: function (params) {
+                                    var colorList = [
+                                        '#ee4065', '#41daea', '#39eac6', '#ffde3a'
+                                    ];
+                                    return colorList[params.dataIndex]
+                                },
+                                label: {
+                                    show: true,
+                                    position: 'top',
+                                    formatter: function (params) {
+                                        return params.value + '(万元)';
+                                    }
+                                }
+                            },
+                            emphasis: {
+                                label: {
+                                    show: true,
+                                    textStyle: {
+                                        fontSize: 12
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                ]
+            };
+            // 使用刚指定的配置项和数据显示图表。
+            myChart.setOption(option);
+            console.log('success, done');
+        }
+        function createEchartData(data) {
+            var paymentData = [],
+                investmentData = [];
+            var paymentData = [{ value: 1500000, name: '中央累计拨付' }, { value: 2100000, name: '当前累计拨付' }]
+            initPieChart("payment_chart", paymentData);
+            var investmentData = [{ value: 1500000, name: '省政府投资' }, { value: 2100000, name: '中央投资' }, { value: 3100000, name: '当前投资' }]
+            $.each(data, function (i, n) {
+
+            });
+        }
+        $(function () {
+            /*
+             * 右侧工具栏动画
+             */
+            $(document).ready(function () {
+                // 标签点击事件
+                $('#toggle1').click(function () {
+                    toggleMove("container1");
+                });
+                $('#toggle2').click(function () {
+                    toggleMove("container2");
+                });
+                $('#toggle3').click(function () {
+                    toggleMove("container3");
+                });
+                // 标签hover事件
+                $('#toggle1').mouseover(function () {
+                    moveInTip("toggle1");
+                });
+                $('#toggle2').mouseover(function () {
+                    moveInTip("toggle2");
+                });
+                $('#toggle3').mouseover(function () {
+                    moveInTip("toggle3");
+                });
+                // 标签离开事件
+                $('#toggle1').mouseleave(function () {
+                    moveOutTip("toggle1");
+                });
+                $('#toggle2').mouseleave(function () {
+                    moveOutTip("toggle2");
+                });
+                $('#toggle3').mouseleave(function () {
+                    moveOutTip("toggle3");
+                });
+            });
+
+            /*
+             * 填充页面数据
+             */
+            // 概览数据
+            var surveyData = [1, 2, 3, 4]
+            addSurveyData(surveyData);
+            // 代办信息 & 申请信息
+            var commissionData = [
+                { "plant_name": "a水库", "update_time": "2015-11-23", "legal_representative_name": "A", "local_accumulative_payment": "110000", "total_investment": "2000000" },
+                { "plant_name": "b水库", "update_time": "2016-09-20", "legal_representative_name": "B", "local_accumulative_payment": "120000", "total_investment": "5000000" },
+                { "plant_name": "c水库", "update_time": "2017-01-06", "legal_representative_name": "C", "local_accumulative_payment": "130000", "total_investment": "7000000" },
+                { "plant_name": "d水库", "update_time": "2017-03-18", "legal_representative_name": "D", "local_accumulative_payment": "140000", "total_investment": "4000000" },
+                { "plant_name": "e水库", "update_time": "2017-05-23", "legal_representative_name": "E", "local_accumulative_payment": "150000", "total_investment": "10200000" },
+                { "plant_name": "f水库", "update_time": "2017-10-12", "legal_representative_name": "F", "local_accumulative_payment": "160000", "total_investment": "8900000" },
+                { "plant_name": "f水库", "update_time": "2017-10-12", "legal_representative_name": "F", "local_accumulative_payment": "160000", "total_investment": "8900000" }
+            ];
+            // 代办
+            addCommission(commissionData);
+            // 申请
+            addApplication(commissionData);
+
+            // echart数据处理
+
+            // 饼图
+            var paymentData = [{ value: 1500000, name: '中央累计拨付' }, { value: 2100000, name: '当前累计拨付' }]
+            initPieChart("payment_chart", paymentData);
+            var investmentData = [{ value: 1500000, name: '省政府投资' }, { value: 2100000, name: '中央投资' }, { value: 3100000, name: '当前投资' }]
+            initPieChart("investment_chart", investmentData);
+            // 柱状图
+            // initBarChart("overview_map");
+        })
+    </script>
+
+    <script>
+        /**
+         *  initRegionPie 投资分布图
+         */
+        function initRegionPie(id, data, seriesKey, name, orient) {
+            var myChart = echarts.init(document.getElementById(id));
+            var chartData = getData(data, seriesKey);
+            var option = {
+                tooltip: {
+                    trigger: 'item',
+                    // position: "right",
+                    position: [10, 10],
+                    textStyle: {
+                        fontFamily: 'Microsoft YaHei'
+                    },
+                    formatter: "{a} <br/>{b} :<span class='map-num'> {c} ({d}%)</span>"
+                },
+                legend: {
+                    type: 'scroll',
+                    orient: orient ? 'vertical' : 'horizontal',
+                    right: 10,
+                    top: 5,
+                    bottom: 20,
+                    pageIconColor: "#fff",
+                    textStyle: {
+                        color: "#fff"
+                    },
+                    pageButtonItemGap: 1,
+                    pageTextStyle: {
+                        color: "#fff"
+                    },
+                    pageIconSize: 10,
+                    itemWidth: 20,
+                    itemHeight: 10,
+                    data: chartData.legendData,
+                },
+                series: [
+                    {
+                        name: name,
+                        type: 'pie',
+                        radius: '55%',
+                        center: ['40%', '50%'],
+                        label: {
+                            show: false,
+                            // position: "inside"
+                        },
+                        data: chartData.seriesData,
+                        itemStyle: {
+                            emphasis: {
+                                shadowBlur: 10,
+                                shadowOffsetX: 0,
+                                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                            }
+                        }
+                    }
+                ]
+            };
+            // 设置参数并初始化
+            myChart.setOption(option);
+
+            myChart.on('click', function (params) {
+                if (params.componentType === 'series' && params.data.children && params.data.children.length > 0) {
+                    slideDetail("grid", params.data.children, params.data.name);
+                } else {
+                    closeDetail();
+                }
+            });
+        }
+        function getData(data, seriesKey) {
+            var legendData = [],
+                seriesData = [];
+            $.each(data, function (i, n) {
+                legendData.push(n.name);
+                n.value = n[seriesKey];
+                seriesData.push(n);
+            });
+            var chartData = {
+                legendData: legendData,
+                seriesData: seriesData
+            }
+            return chartData;
+        }
+        /**
+         *  programStatus 项目状态统计图
+         */
+        function initProgramStatus(id, data) {
+
+        }
+        /**
+         *  initProgramFunnel 明星工程
+         */
+        function initProgramFunnel(id, data, name, hasChild, orient) {
+            var myChart = echarts.init(document.getElementById(id));
+            var chartData = getData(data, "value");
+            var option = {
+                /*  title: {
+                     text: '漏斗图',
+                     subtext: '纯属虚构'
+                 }, */
+                tooltip: {
+                    trigger: 'item',
+                    textStyle: {
+                        fontFamily: 'Microsoft YaHei'
+                    },
+                    formatter: "{a} <br/>{b} : <span class='map-num'>{c}%</span>"
+                },
+                legend: {
+                    type: 'scroll',
+                    orient: orient ? 'vertical' : 'horizontal',
+                    right: 10,
+                    top: 5,
+                    bottom: 20,
+                    pageIconColor: "#fff",
+                    textStyle: {
+                        color: "#fff"
+                    },
+                    pageButtonItemGap: 1,
+                    pageTextStyle: {
+                        color: "#fff"
+                    },
+                    pageIconSize: 10,
+                    itemWidth: 20,
+                    itemHeight: 10,
+                    data: chartData.legendData
+                },
+                series: [
+                    {
+                        name: name,
+                        type: 'funnel',
+                        left: '10%',
+                        width: '80%',
+                        maxSize: '80%',
+                        label: {
+                            normal: {
+                                show: false,
+                                position: 'inside',
+                                formatter: '{b}',
+                                textStyle: {
+                                    color: '#fff'
+                                }
+                            },
+                            emphasis: {
+                                position: 'inside',
+                                formatter: "{b}: {c}%",
+                                textStyle: {
+                                    color: '#fff',
+                                    fontFamily: 'Lccd'
+                                }
+                            }
+                        },
+                        itemStyle: {
+                            normal: {
+                                // opacity: 0.5,
+                                borderColor: '#fff',
+                                borderWidth: 1
+                            }
+                        },
+                        data: chartData.seriesData
+                    }
+                ]
+            };
+            // 设置参数并初始化
+            myChart.setOption(option);
+            // 点击事件
+            myChart.on('click', function (params) {
+                if (params.componentType === 'series' && params.data.children && Object.keys(params.data.children).length > 0) {
+                    $("#item_title").text(params.name);
+                    $.when(slideDetail("chart")).done(function () {
+                        setTimeout(function () {
+                            initProgramInvestment("chart_detail", params.data.children, ["申请拨付", "实际拨付"]);
+                        }, 500);
+                    });
+                } else {
+                    closeDetail();
+                }
+            });
+        }
+        /**
+         *  initProgramInvestment 各项目进度图
+         */
+        function initProgramInvestment(id, data, legendData) {
+            var myChart = echarts.init(document.getElementById(id));
+            var chartData = getBarData(data);
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                    position: [10, 10],
+                    axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                        type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                    },
+                    textStyle: {
+                        fontFamily: 'Microsoft YaHei'
+                    },
+                    formatter: "<span style='color:#f0ab58'>{b}</span> <br/>{a0} : <span class='map-num'>{c0}</span>(万元)<br/>{a1} : <span class='map-num'>{c1}</span>(万元)"
+                },
+                legend: {
+                    orient: 'horizontal',
+                    top: 5,
+                    textStyle: {
+                        color: "#fff"
+                    },
+                    itemWidth: 20,
+                    itemHeight: 10,
+                    data: legendData
+                },
+                grid: {
+                    left: '2px',
+                    containLabel: true
+                },
+                calculable: true,
+                xAxis: [
+                    {
+                        type: 'category',
+                        axisTick: {
+                            alignWithLabel: true
+                        },
+                        axisLine: {
+                            lineStyle: {
+                                // 使用深浅的间隔色
+                                color: '#565656'
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#fff',
+                                fontFamily: 'Microsoft YaHei'
+                            }
+                        },
+                        data: chartData.xAxisData
+                    }
+                ],
+                yAxis: [
+                    {
+                        type: 'value',
+                        axisTick: {
+                            show: false
+                        },
+                        // y 轴线
+                        axisLine: {
+                            show: false,
+                        },
+                        splitLine: {
+                            show: true,  //显示分割线     
+                            lineStyle: {
+                                // 使用深浅的间隔色
+                                color: '#565656',
+                                type: 'dotted'
+                            }
+                        },
+                        axisLabel: {
+                            textStyle: {
+                                color: '#f0ab58',
+                                fontFamily: 'Lccd'
+                            }
+                        }
+                    }
+                ],
+                series: [
+                    {
+                        name: legendData[0],
+                        type: 'bar',
+                        color: '#1ab394 ',
+                        data: chartData.actualSeries
+                    },
+                    {
+                        name: legendData[1],
+                        type: 'bar',
+                        color: '#f0ab58',
+                        data: chartData.totalSeries
+                    }
+                ]
+            };
+            myChart.setOption(option);
+
+            // 点击事件
+            myChart.on('click', function (params) {
+                if (params.componentType === 'series' && params.data.children && Object.keys(params.data.children).length > 0) {
+                    $.when(slideDetail("chart")).done(function () {
+                        $("#item_title").text(params.name);
+                        setTimeout(function () {
+                            initProgramInvestment("chart_detail", params.data.children, ["实际投资", "总投资"]);
+                        }, 500);
+                    });
+                } else {
+                    closeDetail();
+                }
+            });
+        }
+        function getBarData(data) {
+            var xAxisData = [],
+                totalSeries = [],
+                actualSeries = [];
+            $.each(data, function (i, n) {
+                xAxisData.push(n.name || n.time);
+                totalSeries.push({ value: n.total, children: n.children });
+                actualSeries.push({ value: n.actual, children: n.children });
+            });
+            var chartData = {
+                xAxisData: xAxisData,
+                totalSeries: totalSeries,
+                actualSeries: actualSeries
+            };
+            return chartData;
+        }
+        function closeItemChart() {
+            $('.chart-div').slideUp(300);
+            setTimeout(function () {
+                $("#chart_div").html("<div id='chart_detail' />");
+            }, 500);
+        }
+        function slideDetail(open, data, name) {
+            var def = $.Deferred();
+            closeDetail();
+            if (open === "grid") {
+                setTimeout(function () {
+                    initGrid("table_list_1", data, name);
+                    $(".overview-grid").slideDown(300);
+                    def.resolve();
+                }, 500);
+            } else {
+                setTimeout(function () {
+                    $(".chart-div").slideDown(300);
+                    def.resolve();
+                }, 500);
+            }
+            return def.promise();
+        }
+        function closeDetail() {
+            // 隐藏所有详情
+            $(".chart-div").slideUp(300);
+            $(".overview-grid").slideUp(300);
+            setTimeout(function () {
+                $("#chart_div").html("<div id='chart_detail' />");
+                $(".overview-grid").html('<table id="table_list_1"></table><div id="pager_list_1"></div>');
+            }, 300);
+        }
+        function initGrid(id, data, name) {
+            $(".overview-grid").html('<table id="table_list_1"></table><div id="pager_list_1"></div>');
+            var mydata = [];
+            var index = 1;
+            $.each(data, function (i, n) {
+                n.seq = index;
+                n.percent = ((n.actual / n.total) * 100).toFixed(2) + "%";
+                mydata.push(n);
+                index++;
+            });
+            $("#table_list_1").jqGrid({
+                data: mydata,
+                datatype: "local",
+                height: 210,
+                autowidth: true,
+                shrinkToFit: true,
+                rowNum: 14,
+                rowList: [10, 20, 30],
+                colNames: ['序号', '水库', '实际投资', '总投资', '项目进度'],
+                colModel: [
+                    { name: 'seq', index: 'seq', width: 60, sorttype: "int" },
+                    // { name: 'invdate', index: 'invdate', width: 90, sorttype: "date", formatter: "date" },
+                    { name: 'name', index: 'name', width: 100 },
+                    { name: 'actual', index: 'actual', width: 80, align: "right", sorttype: "float", formatter: "number" },
+                    { name: 'total', index: 'total', width: 80, align: "right", sorttype: "float", formatter: "number" },
+                    { name: 'percent', index: 'percent', width: 80, align: "right", sorttype: "float" },
+                    // { name: 'note', index: 'note', width: 150, sortable: false }
+                ],
+                pager: "#pager_list_1",
+                viewrecords: true,
+                caption: name,
+                hidegrid: false
+            });
+        }
+        function removeAllMarker() {
+            var allOverlay = map.getOverlays();
+            /* for (var i = 0; i < allOverlay.length - 1; i++) {
+                if (allOverlay[i].point) {
+                    map.removeOverlay(allOverlay[i]);
+                    // return false;
+                }
+            } */
+            map.clearOverlays();
+        }
+        function searchLocation() {
+            var plantName = $(".search-location>input").val(),
+                meetConditions = [];
+            map.clearOverlays();
+            var points = [];
+            allData.map(function (item, i, allData) {
+                if (item["plant_name"].indexOf(plantName) > -1) {
+                    // meetConditions.push(item);
+                    points.push(createMarker(item));
+                }
+            });
+            map.setViewport(points, { zoomFactor: -6 });
+        }
+        function initItemVideo() {
+            var obj = document.getElementById("DPSDK_OCX");
+            // 初始化
+            var gWndId = obj.DPSDK_CreateSmartWnd(0, 0, 100, 100);
+            obj.DPSDK_SetWndCount(gWndId, 1);
+            obj.DPSDK_SetSelWnd(gWndId, 0);
+            for (var i = 1; i <= 4; i++)
+                obj.DPSDK_SetToolBtnVisible(i, false);
+            obj.DPSDK_SetToolBtnVisible(7, false);
+            obj.DPSDK_SetToolBtnVisible(9, false);
+            obj.DPSDK_SetControlButtonShowMode(1, 0);
+            obj.DPSDK_SetControlButtonShowMode(2, 0);
+
+            // 登录
+            // var nRet1 = obj.DPSDK_Login("58.16.188.145", "9000", "向敬光", "123456");
+            var nRet1 = obj.DPSDK_Login("111.85.91.84", "9000", "system", "admin123");
+
+            // 加载组织结构
+            obj.DPSDK_LoadDGroupInfo();
+            // 获取组织结构
+            var videoXML = obj.DPSDK_GetDGroupStr();
+            document.getElementById("xml").innerText = videoXML;
+            // 根据通道ID连接DMS
+            var nRet2 = obj.DPSDK_ConnectDmsByChnlId("1000063$1$0$1");
+            // 播放视频
+            var szCameraId = "1000063$1$0$1";            // 视频通道
+            var nStreamType = "1";       // 主码流
+            var nMediaType = "1";       //视频
+            var nTransType = "1";       //视频
+
+            var nWndNo = obj.DPSDK_GetSelWnd(gWndId);
+            var nRet = obj.DPSDK_StartRealplayByWndNo(gWndId, nWndNo, szCameraId, nStreamType, nMediaType, nTransType);
+            if (nRet == 0) {
+                obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 1, 1);
+                obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 2, 1);
+                obj.DPSDK_SetIvsShowFlagByWndNo(gWndId, nWndNo, 3, 1);
+            }
+        }
+        function onSelected(e) {
+            var $dom = $(e.target).is("li") ? $(e.target) : $(e.target).parents("li");
+            $dom.addClass("dom-selected");
+            $dom.siblings("li").removeClass("dom-selected");
+        }
+        // 移动距离计算
+        function moveDistance(e) {
+            var $dom = $(e.target).is("li") ? $(e.target) : $(e.target).parents("li");
+            var childTop = $dom.offset().top,
+                parentTop = $dom.parent("ul").offset().top;
+            return childTop - parentTop;
+        }
+        // 一级菜单事件
+        function initFirstSelect() {
+            $.ajax({
+                url: 'json/province.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var regionStr = [];
+                    $.each(data, function (i, n) {
+                        var liStr = '<li><a id="' + n.id + '">' + n.name + '</a><span><i class="fa fa-angle-right"></i></span></li>';
+                        regionStr.push(liStr);
+                    });
+                    $(".first-region>ul").html(regionStr.join(""));
+                    $("#region_select").show();
+                }
+            })
+            // 一级菜单     区域选择
+            $("#region_select>.first-region>ul").on('click', "li", function () {
+                var id = $(this).attr('id'),
+                    index = $(this).index(),
+                    regionName = $(this).text();
+                console.log("regionName", regionName);
+                initSecondSelect(id, index, event);
+                onSelected(event);
+                getBoundary(regionName);
+            });
+        }
+        // 二级菜单事件
+        function initSecondSelect(id, index, e) {
+            $.ajax({
+                url: 'json/country.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var regionStr = [];
+                    $.each(data, function (i, n) {
+                        var liStr = '<li><a id="' + n.id + '">' + n.name + '</a><span><i class="fa fa-angle-right"></i></span></li>';
+                        regionStr.push(liStr);
+                    });
+                    $(".second-region>ul").html(regionStr.join(""));
+                    // 隐藏，为了动画做准备
+                    $(".second-region").hide();
+                    // 调整位置，dom操作
+                    $(".second-region").css("top", moveDistance(e) + 'px');
+                    setTimeout(function () {
+                        // 动画效果
+                        $(".second-region").show();
+                    }, 200);
+                    $(".third-region").hide();
+                }
+            });
+            // 二级菜单     区域选择
+            $(".second-region>ul").on('click', "li", function () {
+                var id = $(this).attr('id'),
+                    index = $(this).index(),
+                    regionName = $(this).text();
+                initThirdSelect(id, index, event);
+                onSelected(event);
+                getBoundary(regionName);
+            });
+        }
+        // 三级菜单事件
+        function initThirdSelect(id, index, e) {
+            $.ajax({
+                url: 'json/reservoir.json',
+                type: 'GET',
+                dataType: 'json',
+                success: function (data) {
+                    var regionStr = [];
+                    map.clearOverlays();
+                    $.each(data, function (i, n) {
+                        var liStr = '<li><a id="' + n.id + '">' + n.name + '</a></li>';
+                        regionStr.push(liStr);
+                        // 过滤数据地图打点
+                        createMarker(n);
+                    });
+                    $(".third-region>ul").html(regionStr.join(""));
+                    // 隐藏三级菜单，为后面动画做准备
+                    $(".third-region").hide();
+                    // 调整位置，dom操作
+                    $(".third-region").css("top", moveDistance(e) + 'px');
+                    setTimeout(function () {
+                        $(".third-region").show();
+                    }, 200);
+                }
+            });
+            // 二级菜单     区域选择
+            $(".third-region>ul").on('click', "li", function () {
+                var id = $(this).attr(id);
+                location.href = "reservior_index?baseInfoId=" + id;
+            });
+        }
+        $(function () {
+            // 投资分布
+            var regionData = [
+                { name: "安顺", total: 698600.98, actual: 225969, children: [{ name: "西秀区干沟水库", total: 698600.98, actual: 225969 }, { name: "西秀区雨棚水库", total: 2543666.74, actual: 213930 }, { name: "西秀区新场河水库工程", total: 435870.32, actual: 195615 }, { name: "紫云县打冲沟水库", total: 1808457.64, actual: 504616 }, { name: "镇宁自治县白沙水库", total: 1243110.22, actual: 843085 }, { name: "织金县白泥坡水库", total: 1259083.94, actual: 227307 }, { name: "普定县木栱河水库", total: 1371855.03, actual: 468491 }, { name: "镇宁县纳井田水库工程", total: 1148453.13, actual: 344755 }, { name: "长顺县马龙田水库", total: 1715567.5803, actual: 827124 }] },
+                { name: "毕节", total: 2543666.74, actual: 213930, children: [{ name: "黔西县附廓水库加高扩建工程", total: 698600.98, actual: 225969 }, { name: "赫章县万家沟水库", total: 2543666.74, actual: 213930 }, { name: "七星关区普宜水库", total: 435870.32, actual: 195615 }, { name: "七星关区龙官桥水库", total: 1808457.64, actual: 504616 }, { name: "七星关区双河口水库", total: 1243110.22, actual: 843085 }, { name: "织金县洗马塘水库", total: 1259083.94, actual: 227307 }, { name: "赫章县河口水库", total: 1371855.03, actual: 468491 }, { name: "大方县岔河水库灌溉工程", total: 1148453.13, actual: 344755 }, { name: "纳雍县金蟾水库灌溉工程", total: 1715567.5803, actual: 827124 }] },
+                { name: "贵阳", total: 435870.32, actual: 195615, children: [{ name: "修文县金龙水库", total: 698600.98, actual: 225969 }, { name: "花溪区栗木水库", total: 2543666.74, actual: 213930 }, { name: "开阳县杉木林水库工程", total: 435870.32, actual: 195615 }, { name: "贵阳市红岩水库", total: 1808457.64, actual: 504616 }, { name: "黔西县附廓水库加高扩建工程", total: 1243110.22, actual: 843085 }, { name: "威宁县杨湾桥水库", total: 1259083.94, actual: 227307 }, { name: "清镇市燕尾水库", total: 1371855.03, actual: 468491 }, { name: "长顺县马龙田水库", total: 1148453.13, actual: 344755 }, { name: "习水县铜灌口水库灌区工程", total: 1715567.5803, actual: 827124 }] },
+                { name: "六盘水", total: 1808457.64, actual: 504616, children: [{ name: "钟山区中坡水库", total: 698600.98, actual: 225969 }, { name: "水城县出水沟水库", total: 2543666.74, actual: 213930 }, { name: "六盘水市双桥水库供水工程", total: 435870.32, actual: 195615 }, { name: "盘县卡河水库工程", total: 1808457.64, actual: 504616 }, { name: "钟山区关门山水库工程", total: 1243110.22, actual: 843085 }, { name: "盘县石桥水库", total: 1259083.94, actual: 227307 }, { name: "钟山区韭菜坪水库", total: 1371855.03, actual: 468491 }, { name: "六枝特区纳革水库", total: 1148453.13, actual: 344755 }, { name: "钟山区红岩水库", total: 1715567.5803, actual: 827124 }] },
+                { name: "黔东南", total: 1243110.22, actual: 843085, children: [{ name: "黄平县印地坝水库", total: 698600.98, actual: 225969 }, { name: "镇远县天印水库", total: 2543666.74, actual: 213930 }, { name: "天柱鱼塘水库首部枢纽及库区复建工程", total: 435870.32, actual: 195615 }, { name: "剑河县地豆水库", total: 1808457.64, actual: 504616 }, { name: "镇远县狗鱼塘水库", total: 1243110.22, actual: 843085 }, { name: "施秉县潭子湾水库", total: 1259083.94, actual: 227307 }, { name: "雷山县西江水库", total: 1371855.03, actual: 468491 }, { name: "从江县登盆水库", total: 1148453.13, actual: 344755 }, { name: "台江县南开水库工程", total: 1715567.5803, actual: 827124 }] },
+                { name: "黔南", total: 1259083.94, actual: 227307, children: [{ name: "三都县甲晒水库", total: 698600.98, actual: 225969 }, { name: "长顺县马龙田水库", total: 2543666.74, actual: 213930 }, { name: "福泉市官阳冲水库", total: 435870.32, actual: 195615 }, { name: "惠水县平寨水库", total: 1808457.64, actual: 504616 }, { name: "荔波县拉寨水库", total: 1243110.22, actual: 843085 }, { name: "荔波县拉毛水库工程", total: 1259083.94, actual: 227307 }, { name: "三都县甲照水库工程", total: 1371855.03, actual: 468491 }, { name: "都匀市大河水库", total: 1148453.13, actual: 344755 }, { name: "罗甸县林霞水库", total: 1715567.5803, actual: 827124 }] },
+                { name: "黔西南", total: 1371855.03, actual: 468491, children: [{ name: "普安县大湾水库", total: 698600.98, actual: 225969 }, { name: "普安县三岔河水库", total: 2543666.74, actual: 213930 }, { name: "册亨县者述水库", total: 435870.32, actual: 195615 }, { name: "册亨县新花水库", total: 1808457.64, actual: 504616 }, { name: "晴隆县西泌河水库工程", total: 1243110.22, actual: 843085 }, { name: "马岭水利枢纽工程", total: 1259083.94, actual: 227307 }, { name: "安龙县者山河水库", total: 1371855.03, actual: 468491 }, { name: "兴义市木浪河水库扩建工程", total: 1148453.13, actual: 344755 }, { name: "册亨县册亨水库工程", total: 1715567.5803, actual: 827124 }] },
+                { name: "铜仁", total: 1148453.13, actual: 344755, children: [{ name: "思南县沙坝水库工程", total: 698600.98, actual: 225969 }, { name: "思南县双河口水库", total: 2543666.74, actual: 213930 }, { name: "思南县枹木寨水利灌溉工程", total: 435870.32, actual: 195615 }, { name: "松桃县盐井水利工程", total: 1808457.64, actual: 504616 }, { name: "江口县鱼粮水库工程", total: 1243110.22, actual: 843085 }, { name: "松桃县白泥水库工程", total: 1259083.94, actual: 227307 }, { name: "江口县军屯水库工程", total: 1371855.03, actual: 468491 }, { name: "尖坡水库", total: 1148453.13, actual: 344755 }, { name: "万山区老山口水库", total: 1715567.5803, actual: 827124 }] },
+                { name: "遵义", total: 1715567.5803, actual: 827124, children: [{ name: "余庆县小乌江水库", total: 698600.98, actual: 225969 }, { name: "播州区清水河水库", total: 2543666.74, actual: 213930 }, { name: "道真县沙坝水库扩建加高工程", total: 435870.32, actual: 195615 }, { name: "播州区苟江水库", total: 1808457.64, actual: 504616 }, { name: "习水县铜灌口水库灌区工程", total: 1243110.22, actual: 843085 }, { name: "汇川区麻沟水库工程", total: 1259083.94, actual: 227307 }, { name: "遵义市中桥水库工程", total: 1371855.03, actual: 468491 }, { name: "播州区平正水库", total: 1148453.13, actual: 344755 }, { name: "正安县杨柳溪水库工程", total: 1715567.5803, actual: 827124 }] }
+            ]
+            initRegionPie("region_pie", regionData, "total", "投资");
+            // 项目状态
+            var statusData = [
+                { name: "大坝开挖", value: 25 },
+                { name: "大坝填筑", value: 38 },
+                { name: "前期工作", value: 174 },
+                { name: "三通一平", value: 6 },
+                { name: "施工准备", value: 13 },
+                { name: "通水验收", value: 1 },
+                { name: "项目关闭", value: 0 },
+                { name: "蓄水验收", value: 33 },
+                { name: "蓄水准备", value: 36 }
+            ]
+            initRegionPie("program_status", statusData, "value", "阶段数量(占比)");
+            // 总投资与实际投资占比
+            initProgramInvestment("program_investment", regionData, ["实际投资", "总投资"]);
+
+            // 明星工程
+            var programStarData = [
+                { value: 50, name: '镇远县狗鱼塘水库', children: [{ time: "2017-01-01", actual: 225969, total: 698600.98 }, { time: "2017-01-02", actual: 213930, total: 2543666.74 }, { time: "2017-01-03", actual: 195615, total: 435870.32 }, { time: "2017-01-04", actual: 504616, total: 1808457.64 }, { time: "2017-01-05", actual: 843085, total: 1243110.22 }, { time: "2017-01-06", actual: 227307, total: 1259083.94 }, { time: "2017-01-07", actual: 468491, total: 1371855.03 }, { time: "2017-01-08", actual: 344755, total: 1148453.13 }, { time: "2017-01-09", actual: 827124, total: 1715567.5803 }] },
+                { value: 60, name: '思南县枹木寨水利灌溉工程', children: [{ time: "2017-01-01", actual: 225239, total: 698600.98 }, { time: "2017-01-02", actual: 2121930, total: 2543666.74 }, { time: "2017-01-03", actual: 635615, total: 435870.32 }, { time: "2017-01-04", actual: 534616, total: 1808457.64 }, { time: "2017-01-05", actual: 837085, total: 1243110.22 }, { time: "2017-01-06", actual: 221207, total: 1259083.94 }, { time: "2017-01-07", actual: 484491, total: 1371855.03 }, { time: "2017-01-08", actual: 348755, total: 1148453.13 }, { time: "2017-01-09", actual: 884124, total: 1715567.5803 }] },
+                { value: 70, name: '播州区苟江水库', children: [{ time: "2017-01-01", actual: 223739, total: 698600.98 }, { time: "2017-01-02", actual: 212120, total: 2543666.74 }, { time: "2017-01-03", actual: 694615, total: 435870.32 }, { time: "2017-01-04", actual: 53716, total: 1808457.64 }, { time: "2017-01-05", actual: 873085, total: 1243110.22 }, { time: "2017-01-06", actual: 223207, total: 1259083.94 }, { time: "2017-01-07", actual: 484491, total: 1371855.03 }, { time: "2017-01-08", actual: 348235, total: 1148453.13 }, { time: "2017-01-09", actual: 884834, total: 1715567.5803 }] },
+                { value: 90, name: '黔西县附廓水库加高扩建工程', children: [{ time: "2017-01-01", actual: 278739, total: 698600.98 }, { time: "2017-01-02", actual: 2121340, total: 2543666.74 }, { time: "2017-01-03", actual: 699315, total: 435870.32 }, { time: "2017-01-04", actual: 523516, total: 1808457.64 }, { time: "2017-01-05", actual: 879485, total: 1243110.22 }, { time: "2017-01-06", actual: 223297, total: 1259083.94 }, { time: "2017-01-07", actual: 423491, total: 1371855.03 }, { time: "2017-01-08", actual: 349435, total: 1148453.13 }, { time: "2017-01-09", actual: 8884534, total: 1715567.5803 }] },
+                { value: 80, name: '七星关区双河口水库', children: [{ time: "2017-01-01", actual: 278349, total: 698600.98 }, { time: "2017-01-02", actual: 2154340, total: 2543666.74 }, { time: "2017-01-03", actual: 635315, total: 435870.32 }, { time: "2017-01-04", actual: 523226, total: 1808457.64 }, { time: "2017-01-05", actual: 884485, total: 1243110.22 }, { time: "2017-01-06", actual: 242297, total: 1259083.94 }, { time: "2017-01-07", actual: 428391, total: 1371855.03 }, { time: "2017-01-08", actual: 3459435, total: 1148453.13 }, { time: "2017-01-09", actual: 8354534, total: 1715567.5803 }] }
+            ]
+            initProgramFunnel("program_funnel", programStarData, "工程进度");
+
+            // 绑定搜索事件
+            $(".search-location").on("click", "i", searchLocation);
+            $(".search-location").on("keypress", "input", function () {
+                var keycode = event.keyCode || event.which || event.charCode;
+                if (keycode === 13) {
+                    searchLocation();
+                }
+            });
+            $(".all-details").on("click", "a", function () {
+                var baseInfoId = $(this).attr("project-id");
+                location.href = "reservoir_index.html?baseInfoId" + baseInfoId;
+            });
+            // 关闭监控
+            $(".video-close").on("click", function () {
+                $(".overview-video").removeClass("video-show");
+            });
+            $(".text-muted.text-xs.block").on("click", function () {
+                initFirstSelect();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

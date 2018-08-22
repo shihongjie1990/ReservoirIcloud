@@ -1,0 +1,467 @@
+
+<link href="css/plugins/iCheck/custom.css" rel="stylesheet">
+<link href="css/plugins/steps/jquery.steps.css" rel="stylesheet">
+
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet">
+<link href="css/plugins/datapicker/datepicker3.css" rel="stylesheet">
+<link href="css/plugins/daterangepicker/daterangepicker-bs3.css" rel="stylesheet">
+
+<link href="css/plugins/cropper/cropper.min.css" rel="stylesheet">
+<link href="css/plugins/sweetalert/sweetalert.css" rel="stylesheet">
+<div class="row">
+    <div class="col-lg-12">
+        <div class="ibox">
+            <div class="ibox-title">
+                <h5>月报新增</h5>
+            </div>
+            <div class="ibox-content">
+                <form id="form" action="#" class="wizard-big">
+
+                    <h1>投资情况</h1>
+                    <fieldset>
+                        <h2>工程部分投资</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>建筑工程(万元)</label><span style="color:red;"> *</span>
+                                    <input id="mr11" type="text" class="form-control required number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>金属机构设备及安装工程(万元)</label><span style="color:red;"> *</span>
+                                    <input id="mr22" type="text" class="form-control number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>独立费用(万元)</label><span style="color:red;"> *</span>
+                                    <input id=""  type="text" class="form-control number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>机电设备及安装工程(万元)</label><span style="color:red;"> *</span>
+                                    <input id="email" name="name" type="text" class="form-control number">
+                                </div>
+                                <div class="form-group">
+                                    <label>施工临时工程(万元)</label><span style="color:red;"> *</span>
+                                    <input id="address" name="address" type="text" class="form-control number">
+                                </div>
+                                <div class="form-group">
+                                    <label>基本预备费(万元)</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="hr-line-dashed"></div>
+
+                        <h2>移民、环境投资</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>建设征地移民安置补偿费(万元)</label><span style="color:red;"> *</span>
+                                    <input id="" name="name" type="text" class="form-control required number">
+                                </div>
+                                    <div class="form-group">
+                                        <label>环境保护工程投资(万元)</label><span style="color:red;"> *</span>
+                                        <input id="" name="name" type="text" class="form-control number">
+                                    </div>
+                                </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>水土保持工程投资(万元)</label><span style="color:red;"> *</span>
+                                    <input id="" name="name" type="text" class="form-control number">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>其他(万元)</label>
+                                    <input id="" name="name" type="text" class="form-control number">
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <h1>工程量情况</h1>
+                    <fieldset>
+                        <h2>本月完成工程量</h2>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>土石方明挖（万/m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control required number">
+                                </div>
+                                <div class="form-group">
+                                    <label>土石方回填（万/m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number ">
+                                </div>
+                                <div class="form-group">
+                                    <label>混泥土（万/m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+                                <div class="form-group">
+                                    <label>灌浆（m或m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="form-group">
+                                    <label>土石方洞挖</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control required number">
+                                </div>
+                                <div class="form-group">
+                                    <label>砌石（万/m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+                                <div class="form-group">
+                                    <label>钢筋（t）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="hr-line-dashed"></div>
+
+                    </fieldset>
+
+                    <h1>项目情况</h1>
+                    <fieldset>
+
+                        <div class="row">
+
+                            <div class="col-lg-12">
+                                <div class="form-group" id="data_4">
+                                    <label class="font-normal">填报月份</label>
+                                    <div class="input-group date">
+                                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span><input type="text" class="form-control" value="07/01/2014">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label>灌浆（m或m³）</label><span style="color:red;"> *</span>
+                                    <input id="" name="surname" type="text" class="form-control number">
+                                </div>
+                                <!--<div class="form-group">-->
+                                    <!--<label>填报月份</label><span style="color:red;"> *</span>-->
+                                    <!--<select class="form-control m-b" name="account">-->
+                                        <!--<option>1月</option>-->
+                                        <!--<option>2月</option>-->
+                                        <!--<option>3月</option>-->
+                                        <!--<option>4月</option>-->
+                                        <!--<option>5月</option>-->
+                                        <!--<option>6月</option>-->
+                                        <!--<option>7月</option>-->
+                                        <!--<option>8月</option>-->
+                                        <!--<option>9月</option>-->
+                                        <!--<option>10月</option>-->
+                                        <!--<option>11月</option>-->
+                                        <!--<option>12月</option>-->
+                                    <!--</select>-->
+                                <!--</div>-->
+
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <label>主要建设内容</label>
+                                    <textarea class="form-control required" ></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>工程形象进度及节点工期</label>
+                                    <textarea class="form-control required" ></textarea>
+                                </div>
+                                <div class="hr-line-dashed"></div>
+                                <div class="form-group">
+                                    <label>存在困难及问题</label>
+                                    <textarea class="form-control "></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>采取的主要措施</label>
+                                    <textarea class="form-control "></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>下一步建议</label>
+                                    <textarea class="form-control "></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label>其他</label>
+                                    <textarea class="form-control "></textarea>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    <h1>附件</h1>
+                    <fieldset>
+                        <h2>图片附件上传</h2>
+                        <br>
+                        <br>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="image-crop">
+                                    <img src="img/10.jpg">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>预览图片</h4>
+                                <div class="img-preview img-preview-sm"></div>
+
+                                <p>
+                                    上传图片并修改
+                                </p>
+                                <div class="btn-group">
+                                    <label title="Upload image file" for="inputImage" class="btn btn-primary">
+                                        <input type="file" accept="image/*" name="file" id="inputImage" class="hide">
+                                        上传图片
+                                    </label>
+                                    <label title="Donload image" id="download" class="btn btn-primary">下载</label>
+                                </div>
+                                <p>
+                                    图片修改
+                                </p>
+                                <div class="btn-group">
+                                    <button class="btn btn-white" id="zoomIn" type="button">放大</button>
+                                    <button class="btn btn-white" id="zoomOut" type="button">缩小</button>
+                                    <button class="btn btn-white" id="rotateLeft" type="button">左转</button>
+                                    <button class="btn btn-white" id="rotateRight" type="button">右转</button>
+                                </div>
+                                <br>
+                                <br>
+                                <div>
+                                    <button class="btn btn-outline btn-lg btn-success">保存图片</button>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="hr-line-dashed"></div>
+                        <!--<div class="row">-->
+                            <!--<div class="col-lg-6">-->
+                                <!---->
+                                <!--<input type="checkbox" class="form-control required"/>-->
+                                <!--<label style="font-size: 15px; color: red;">  已填写完毕并认真检查对应数据.</label>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    </fieldset>
+                    </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Steps -->
+<script src="js/plugins/steps/jquery.steps.min.js"></script>
+
+<!-- Jquery Validate -->
+<script src="js/plugins/validate/jquery.validate.min.js"></script>
+
+
+<!-- Data picker -->
+<script src="js/plugins/datapicker/bootstrap-datepicker.js"></script>
+<!-- Image cropper -->
+<script src="js/plugins/cropper/cropper.min.js"></script>
+<!-- Tags Input -->
+<script src="js/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+
+<script src="js/plugins/sweetalert/sweetalert.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#wizard").steps();
+        $("#form").steps({
+            bodyTag: "fieldset",
+            onStepChanging: function (event, currentIndex, newIndex)
+            {
+                // Always allow going backward even if the current step contains invalid fields!
+                if (currentIndex > newIndex)
+                {
+                    return true;
+                }
+
+                // Forbid suppressing "Warning" step if the user is to young
+                if (newIndex === 3 && Number($("#age").val()) < 18)
+                {
+                    return false;
+                }
+
+                var form = $(this);
+
+                // Clean up if user went backward before
+                if (currentIndex < newIndex)
+                {
+                    // To remove error styles
+                    $(".body:eq(" + newIndex + ") label.error", form).remove();
+                    $(".body:eq(" + newIndex + ") .error", form).removeClass("error");
+                }
+
+                // Disable validation on fields that are disabled or hidden.
+                form.validate().settings.ignore = ":disabled,:hidden";
+
+                // Start validation; Prevent going forward if false
+                return form.valid();
+            },
+            onStepChanged: function (event, currentIndex, priorIndex)
+            {
+                // Suppress (skip) "Warning" step if the user is old enough.
+                if (currentIndex === 2 && Number($("#age").val()) >= 18)
+                {
+                    $(this).steps("next");
+                }
+
+                // Suppress (skip) "Warning" step if the user is old enough and wants to the previous step.
+                if (currentIndex === 2 && priorIndex === 3)
+                {
+                    $(this).steps("previous");
+                }
+            },
+            onFinishing: function (event, currentIndex)
+            {
+                var form = $(this);
+
+                // Disable validation on fields that are disabled.
+                // At this point it's recommended to do an overall check (mean ignoring only disabled fields)
+                form.validate().settings.ignore = ":disabled";
+
+                // Start validation; Prevent form submission if false
+                return form.valid();
+            },
+            onFinished: function (event, currentIndex)
+            {
+                var form = $(this);
+                var test1=$('#mr11').val();
+                var test2=$('#mr22').val();
+                swal({
+                    title: "确认提交吗?",
+                    text: "请检查数据是否填写正确后再提交!",
+                    type: "warning",
+                    showCancelButton: true,
+                    confirmButtonColor: "#DD6B55",
+                    confirmButtonText: "已确认,提交!",
+                    closeOnConfirm: false
+                }, function () {
+                    $.ajax({
+                        url: 'http://www.baidu.com',
+                        type: 'POST',
+                        data: {1: test1, 2: test2},
+                        contentType: 'application/json',
+                        success: function (data){
+                            alert('test123')
+                        }
+                    })
+                    swal("成功!", "已经成功提交!", "success");
+                });
+
+
+
+
+                }
+
+                // Submit form input
+                // form.submit();
+
+        }).validate({
+            errorPlacement: function (error, element)
+            {
+                element.before(error);
+            },
+            rules: {
+                confirm: {
+                    equalTo: "#password"
+                }
+            }
+        });
+
+        $('#data_4 .input-group.date').datepicker({
+            minViewMode: 1,
+            keyboardNavigation: false,
+            forceParse: false,
+            forceParse: false,
+            autoclose: true,
+            todayHighlight: true
+        });
+    });
+</script>
+
+<script>
+    $(document).ready(function(){
+
+        $('.tagsinput').tagsinput({
+            tagClass: 'label label-primary'
+        });
+
+        var $image = $(".image-crop > img")
+        $($image).cropper({
+            aspectRatio: 1.618,
+            preview: ".img-preview",
+            done: function(data) {
+                // Output the result data for cropping image.
+            }
+        });
+
+        var $inputImage = $("#inputImage");
+        if (window.FileReader) {
+            $inputImage.change(function() {
+                var fileReader = new FileReader(),
+                    files = this.files,
+                    file;
+
+                if (!files.length) {
+                    return;
+                }
+
+                file = files[0];
+
+                if (/^image\/\w+$/.test(file.type)) {
+                    fileReader.readAsDataURL(file);
+                    fileReader.onload = function () {
+                        $inputImage.val("");
+                        $image.cropper("reset", true).cropper("replace", this.result);
+                    };
+                } else {
+                    showMessage("Please choose an image file.");
+                }
+            });
+        } else {
+            $inputImage.addClass("hide");
+        }
+
+        $("#download").click(function() {
+            window.open($image.cropper("getDataURL"));
+        });
+
+        $("#zoomIn").click(function() {
+            $image.cropper("zoom", 0.1);
+        });
+
+        $("#zoomOut").click(function() {
+            $image.cropper("zoom", -0.1);
+        });
+
+        $("#rotateLeft").click(function() {
+            $image.cropper("rotate", 45);
+        });
+
+        $("#rotateRight").click(function() {
+            $image.cropper("rotate", -45);
+        });
+
+        $("#setDrag").click(function() {
+            $image.cropper("setDragMode", "crop");
+        });
+    });
+
+
+</script>
+
+</body>
+
+</html>
